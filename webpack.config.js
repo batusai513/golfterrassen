@@ -19,7 +19,7 @@ module.exports = {
         })
       }, {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|webm|mp4)$/,
-        loaders: ['file-loader']
+        loaders: ['file-loader?name=[name].[ext]&outputPath=/images/']
       },
       {
        test: /\.(js)$/,

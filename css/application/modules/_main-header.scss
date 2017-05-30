@@ -1,0 +1,8 @@
+.main-header{
+	background-color: $brand-secondary;
+	padding: $half-spacing-unit $base-spacing-unit;
+	&--positioned {
+		position: absolute;
+		width: 100%;
+	}
+}

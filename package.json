@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.config.js --progress --colors --inline --hot --host 0.0.0.0",
-    "build": "webpack --optimize-minimize --config webpack.config.js --progress --colors"
+    "build": "webpack --optimize-minimize --config webpack.config.js --progress --colors",
+    "deploy": "now ./dist/ --static --public --name golfterrassen"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -25,6 +26,7 @@
     "fullpage.js": "^2.9.2",
     "jquery": "^3.1.1",
     "normalize.css": "^7.0.0",
+    "rellax": "^1.0.0",
     "waypoints": "^4.0.1"
   }
 }

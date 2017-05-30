@@ -1,0 +1,35 @@
+.hero{
+  * {
+    color: inherit;
+  }
+  background-repeat: no-repeat;
+  padding: $base-spacing-unit * 4 0 $base-spacing-unit * 4;
+  @media #{$small} {
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit;
+  }
+}
+
+.hero--main{
+  background-image: url('../images/imagen-sala.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    // background-size: auto;
+    // @include rem(500px, height);
+  }
+}
+
+.hero--terrace {
+  background-image: url('../images/sala-terraza.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.hero--green {
+  background-image: url('../images/ecologico.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+}

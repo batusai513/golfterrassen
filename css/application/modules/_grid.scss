@@ -1,0 +1,47 @@
+.grid{
+	@extend %grid;
+}
+
+.grid--middle{
+  @extend %grid--middle;
+}
+
+.grid--bottom{
+  @extend %grid--bottom;
+}
+
+.grid--full{
+  @extend %grid--full;
+}
+
+.grid__item{
+	@extend %grid__item;
+}
+
+.one-whole{
+  @extend %one-whole;
+}
+
+.one-half{
+  @extend %one-half;
+}
+
+.one-third{
+  @extend %one-third;
+}
+
+.one-quarter{
+  @extend %one-quarter;
+}
+
+.two-thirds{
+  @extend %two-thirds;
+}
+
+.five-twelfths{
+  @extend %five-twelfths;
+}
+
+.seven-twelfths{
+  @extend %seven-twelfths;
+}
