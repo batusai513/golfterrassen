@@ -1,0 +1,12 @@
+.gallery {
+  &__item {
+    position: relative;
+    transition: transform 0.2s ease-out 0.2s, background-color 0.25s ease-out 0.20s, z-index 0.25s ease-out 0.25s;
+    z-index: 0;
+    &:hover {
+      z-index: 2;
+      background-color: rgba(black, 0.5);
+      transform: scale(1.1);
+    }
+  }
+}

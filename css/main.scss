@@ -28,19 +28,22 @@
 @import "application/mixins/opacity";
 @import "application/mixins/rem";
 @import "application/mixins/transitions";
+@import "application/mixins/horizontal-scroll";
 
 //Vendor
 // use this area as vendor overwrite area, use other files for actual vendor filesm it is an extra http request, but keep sanity high
 //@import "application/vendor/jquery-ui";
 
 @import '~normalize.css/normalize.css';
+@import '~flickity/dist/flickity.css';
+@import '~magnific-popup/src/css/main';
 
 //core styles
 //use placeholders for extends only, always be care with placeholders -> http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
 @import "application/core/placeholders";
 @import "application/core/core";
 @import "application/core/fonts";
-@import "application/core/font-icons";
+@import "application/core/icons";
 @import "application/core/typography";
 @import "application/core/layout";
 @import "application/core/grid";
@@ -50,6 +53,7 @@
 //objects, use them directly in the html
 @import "application/objects/nav";
 @import "application/objects/media";
+@import "application/objects/island";
 @import "application/objects/vertical-middle";
 
 //modules, the real css that you write everyday based on the design
@@ -61,8 +65,11 @@
 @import "application/modules/main-header";
 @import "application/modules/hero";
 @import "application/modules/pane";
+@import "application/modules/panel";
 @import "application/modules/main-navigation";
 @import "application/modules/main-footer";
+@import "application/modules/gallery";
+@import "application/modules/slider";
 // @import "application/modules/sticky-footer";
 // @import "application/modules/round-icons";
 

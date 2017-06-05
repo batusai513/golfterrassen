@@ -1,22 +1,30 @@
 .main-navigation{
+	@include horizontal-scrolling;
 	font-size: $font-size-smaller;
 	letter-spacing: 1.7px;
 	text-transform: uppercase;
-	@media #{$small} {
+	text-align: center;
+	@media #{$medium} {
 		text-align: $end;
 	}
 	&__item{
 		display: inline-block;
-		margin-left: $half-spacing-unit;
-		margin-right: $half-spacing-unit;
+		margin-left: $half-spacing-unit / 2;
+		margin-right: $half-spacing-unit / 2;
+		position: relative !important;
+		left: auto !important;
+		@media #{$medium} {
+			margin-left: $half-spacing-unit;
+			margin-right: $half-spacing-unit;
+		}
 		&--has-border {
-			position: relative;
 			&:after {
 				content: '';
 				display: block;
 				position: absolute;
 				left: 0;
 				right: 0;
+				bottom: 1px;
 				margin-left: auto;
 				margin-right: auto;
 				width: 23px;

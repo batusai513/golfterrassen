@@ -43,6 +43,10 @@
   color: white;
 }
 
+.color--text-body {
+  color: $color-text-body;
+}
+
 .color--brand-primary {
   color: $brand-primary;
 }
@@ -51,8 +55,16 @@
   color: $brand-secondary;
 }
 
+.background-color--ui {
+  background-color: $brand-ui;
+}
+
 .background--brand-secondary {
   background-color: $brand-secondary;
+}
+
+.background--light {
+  background-color: #F6F7F6;
 }
 
 .overflow-x {
@@ -61,4 +73,35 @@
 
 .relative{
   position: relative;
+}
+
+.big-shadow {
+  box-shadow: 0 30px 40px rgba(black, 0.15);
+}
+
+.gradient--green {
+  background-image: linear-gradient(to rigth, #87C98A, rgba(#87C98A, 0.06));
+}
+
+.border-separator {
+  &:after {
+    background-color: $brand-primary;
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin-bottom: $half-spacing-unit;
+    margin-top: $base-spacing-unit;
+  }
+  &--white {
+    &:after {
+      background-color: white;
+    }
+  }
+  &--centered {
+    &:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

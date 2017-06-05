@@ -2,12 +2,20 @@
 	@extend %grid;
 }
 
+.grid--rev{
+	@extend %grid--rev;
+}
+
 .grid--middle{
   @extend %grid--middle;
 }
 
 .grid--bottom{
   @extend %grid--bottom;
+}
+
+.grid--wide{
+  @extend %grid--wide;
 }
 
 .grid--full{
@@ -26,22 +34,50 @@
   @extend %one-half;
 }
 
+.medium--one-half{
+  @extend %medium--one-half;
+}
+
 .one-third{
   @extend %one-third;
+}
+
+.small--one-third{
+  @extend %small--one-third;
+}
+
+.medium--one-third{
+  @extend %medium--one-third;
 }
 
 .one-quarter{
   @extend %one-quarter;
 }
 
+.medium--one-quarter{
+  @extend %medium--one-quarter;
+}
+
+.medium--three-quarters{
+  @extend %medium--three-quarters;
+}
+
 .two-thirds{
   @extend %two-thirds;
 }
 
-.five-twelfths{
-  @extend %five-twelfths;
+.small--two-thirds{
+  @extend %small--two-thirds;
 }
 
-.seven-twelfths{
-  @extend %seven-twelfths;
+.medium--two-thirds{
+  @extend %medium--two-thirds;
+}
+
+.medium--five-twelfths{
+  @extend %medium--five-twelfths;
+}
+
+.medium--seven-twelfths{
+  @extend %medium--seven-twelfths;
 }

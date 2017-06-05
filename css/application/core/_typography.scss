@@ -46,12 +46,42 @@ h6, .zeta {
   }
 }
 
-h1, .alpha { @include rem(strip-units($font-size-h1)); }
-h2, .beta { @include rem(strip-units($font-size-h2)); }
-h3, .gamma { @include rem(strip-units($font-size-h3)); }
-h4, .delta { @include rem(strip-units($font-size-h4)); }
-h5, .epsilon { @include rem(strip-units($font-size-h5)); }
-h6, .zeta { @include rem(strip-units($font-size-h6)); }
+h1, .alpha {
+  @include rem(strip-units($font-size-h2));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h1));
+  }
+}
+h2, .beta {
+  @include rem(strip-units($font-size-h3));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h2));
+  }
+}
+h3, .gamma {
+  @include rem(strip-units($font-size-h4));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h3));
+  }
+}
+h4, .delta {
+  @include rem(strip-units($font-size-h5));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h4));
+  }
+}
+h5, .epsilon {
+  @include rem(strip-units($font-size-h5));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h5));
+  }
+}
+h6, .zeta {
+  @include rem(strip-units($font-size-h6));
+  @media #{$medium}{
+    @include rem(strip-units($font-size-h6));
+  }
+}
 
 p {
   margin: 0 0 ($base-spacing-unit);
