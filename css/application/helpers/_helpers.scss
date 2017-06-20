@@ -63,6 +63,10 @@
   background-color: $brand-secondary;
 }
 
+.background--white {
+  background-color: white;
+}
+
 .background--light {
   background-color: #F6F7F6;
 }
@@ -79,8 +83,8 @@
   box-shadow: 0 30px 40px rgba(black, 0.15);
 }
 
-.gradient--green {
-  background-image: linear-gradient(to rigth, #87C98A, rgba(#87C98A, 0.06));
+.text--separated {
+  letter-spacing: 1.71px;
 }
 
 .border-separator {
@@ -102,6 +106,61 @@
     &:after {
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+.image-border {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 70%;
+    width: 60%;
+    z-index: -1;
+  }
+  &--primary {
+    &:after {
+      background-color: $brand-primary;
+    }
+  }
+  &--secondary {
+    &:after {
+      background-color: $brand-secondary;
+    }
+  }
+  &--left {
+    &:after {
+      left: -10px;
+    }
+  }
+  &--right {
+    &:after {
+      right: -10px;
+    }
+  }
+  &--top-middle {
+    &:after {
+      top: 50px;
+    }
+  }
+  &--bottom {
+    &:after {
+      bottom: -10px;
+    }
+  }
+}
+
+.nav-block--medium {
+  .nav-block__item {
+    display: block;
+    padding-right: $half-spacing-unit;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    @media #{$medium} {
+      display: inline-block;
     }
   }
 }

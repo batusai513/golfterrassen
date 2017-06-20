@@ -1,18 +1,29 @@
 "use strict";
 
-const fullpageStyles = require("fullpage.js/dist/jquery.fullpage.min.css");
 const styles = require("../css/style.scss");
 const $ = require("jquery");
-const fullpage = require("fullpage.js");
 const SmartPhone = require("detect-mobile-browser")(false);
 const magnificPopup = require("magnific-popup");
 const Flickity = require("flickity");
 const Rellax = require("rellax");
+const tabby = require("Tabby");
+const smoothScroll = require("smooth-scroll");
+const gumshoe = require("gumshoe");
+const MapFactory = require('./map');
 
 const mainMenu = document.querySelector(".js-menu");
 const rellax = new Rellax(".rellax", {
   center: true
 });
+
+tabby.init();
+smoothScroll.init({
+  speed: 1000
+});
+gumshoe.init({
+  scrollDelay: true
+});
+var map = MapFactory('#map-canvas');
 
 $(".js-gallery").magnificPopup({
   delegate: "a",
@@ -71,19 +82,6 @@ const renderHeroBackground = () => {
   img.src = url;
 };
 
-// const initFullPageJs = () => {
-//   $('#fullpage').fullpage({
-//     navigation: true,
-//     onLeave(index, nextIndex, direction) {
-//       swapVideos(index, nextIndex)
-//     }
-//   });
-
-//   $('.scroll-arrow').click(() => {
-//     $.fn.fullpage.moveSectionDown();
-//   })
-// }
-
 function startMobileMenu(menu) {
   return new Flickity(menu, {
     cellAlign: "left",
@@ -98,6 +96,7 @@ function startMobileMenu(menu) {
 const handleMobileDetection = () => {
   if (!SmartPhone.isAny()) {
     startMobileMenu(mainMenu);
+    startMobileMenu(document.querySelector(".js-tab-menu"));
     $(".js-menu-link").on("dragstart", e => e.preventDefault());
   }
   if (SmartPhone.isAny()) {

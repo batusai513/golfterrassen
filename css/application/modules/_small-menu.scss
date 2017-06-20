@@ -1,0 +1,66 @@
+.small-menu {
+  @include rem();
+  position: fixed;
+  z-index: 10;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 200px;
+  @media #{$medium} {
+    right: 17px;
+  }
+  &__list {
+    margin: 0;
+  }
+  &__item {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 18px 0;
+    cursor: pointer;
+    @media #{$medium} {
+      width: 15px;
+      height: 15px;
+      margin: 12px 0;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: $brand-secondary;
+    color: $brand-secondary;
+    cursor: pointer; /* make the text accessible to screen readers */
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:hover,
+    &:active {
+      color: $brand-secondary;
+    }
+  }
+  &__text {
+    position: absolute;
+    right: 100%;
+    top: -7px;
+    margin-right: 5px;
+    width: 0;
+    overflow: hidden;
+    font-size: em(12);
+  }
+  &--fillin {
+    .small-menu__link {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $brand-secondary;
+      transition: box-shadow 0.3s ease;
+      &.active {
+        box-shadow: inset 0 0 0 8px $brand-secondary;
+        .small-menu__text {
+          // width: auto;
+        }
+      }
+    }
+  }
+}

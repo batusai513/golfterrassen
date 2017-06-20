@@ -37,6 +37,7 @@
 @import '~normalize.css/normalize.css';
 @import '~flickity/dist/flickity.css';
 @import '~magnific-popup/src/css/main';
+@import '~Tabby/src/sass/tabby';
 
 //core styles
 //use placeholders for extends only, always be care with placeholders -> http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
@@ -55,6 +56,7 @@
 @import "application/objects/media";
 @import "application/objects/island";
 @import "application/objects/vertical-middle";
+@import "application/objects/horizontal-scrolling";
 
 //modules, the real css that you write everyday based on the design
 @import "application/modules/grid";
@@ -70,6 +72,9 @@
 @import "application/modules/main-footer";
 @import "application/modules/gallery";
 @import "application/modules/slider";
+@import "application/modules/features";
+@import "application/modules/map";
+@import "application/modules/small-menu";
 // @import "application/modules/sticky-footer";
 // @import "application/modules/round-icons";
 

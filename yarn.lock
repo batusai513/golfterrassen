@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+Tabby@cferdinandi/tabby:
+  version "11.2.0"
+  resolved "https://codeload.github.com/cferdinandi/tabby/tar.gz/24530785fe78b5e6747781baec7390d2b9caaa56"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -1611,6 +1615,10 @@ globule@^1.0.0:
 graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+gumshoe@cferdinandi/gumshoe:
+  version "3.5.0"
+  resolved "https://codeload.github.com/cferdinandi/gumshoe/tar.gz/28cf9b73c7e2dbaac2c18c1a0d7661753a0a7878"
 
 handle-thing@^1.2.5:
   version "1.2.5"
@@ -3263,6 +3271,10 @@ signal-exit@^3.0.0:
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
+smooth-scroll@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/smooth-scroll/-/smooth-scroll-11.1.0.tgz#c12aa1c5b4200df9c5b8fd08d91100f16b55174b"
 
 sntp@1.x.x:
   version "1.0.9"

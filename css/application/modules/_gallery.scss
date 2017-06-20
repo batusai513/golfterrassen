@@ -1,12 +1,47 @@
 .gallery {
   &__item {
     position: relative;
-    transition: transform 0.2s ease-out 0.2s, background-color 0.25s ease-out 0.20s, z-index 0.25s ease-out 0.25s;
+    transition: transform 0.15s ease-out 0.15s, z-index 0.15s ease-out;
     z-index: 0;
     &:hover {
+      transform: scale(1.1);
+      z-index: 1;
+      .gallery__link:after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .gallery__icon {
+        opacity: 1;
+        transition: opacity 0.15s ease-out 0.3s;
+      }
+    }
+  }
+  &__link {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       z-index: 2;
       background-color: rgba(black, 0.5);
-      transform: scale(1.1);
+      transform: scale(0);
+      opacity: 0;
+      transition: opacity 0.15s ease-out, transform 0.15s ease-out;
     }
+  }
+  &__icon {
+    color: white;
+    position: absolute;
+    font-size: em(90);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    opacity: 0;
   }
 }

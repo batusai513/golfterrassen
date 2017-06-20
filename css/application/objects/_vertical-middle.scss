@@ -10,3 +10,16 @@
 		height: 100%;
 	}
 }
+@media #{$medium} {
+	.vm-table--medium {
+		display: table;
+		height: 100%;
+		width: 100%;
+		table-layout: fixed;
+	}
+	.vm-table__cell--medium{
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+}

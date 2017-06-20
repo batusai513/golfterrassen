@@ -17,7 +17,7 @@
 <!--  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-48x48.png" sizes="48x48">-->
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcASZRoMYhQW-PQiReMjB1fuexuGT1lSI&libraries=places"></script>
 </head>
 <body>
 <header class="main-header main-header--positioned">
@@ -32,30 +32,75 @@
       </div><div class="grid__item medium--three-quarters">
         <nav class="main-navigation js-menu">
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a class="js-menu-link" href="#inicio">Inicio</a>
+            <a data-scroll class="js-menu-link" href="#inicio">Inicio</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a class="js-menu-link" href="#amenidades">Amenidades</a>
+            <a data-scroll class="js-menu-link" href="#amenidades">Amenidades</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a class="js-menu-link" href="#apartamentos">Apartamentos</a>
+            <a data-scroll class="js-menu-link" href="#apartamentos">Apartamentos</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a class="js-menu-link" href="#galeria">Galeria</a>
+            <a data-scroll class="js-menu-link" href="#galeria">Galeria</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a class="js-menu-link" href="#ubicacion">Ubicacion</a>
+            <a data-scroll class="js-menu-link" href="#ubicacion">Ubicacion</a>
           </span>
           <span class="main-navigation__item">
-            <a class="js-menu-link" href="#contacto">Contacto</a>
+            <a data-scroll class="js-menu-link" href="#contacto">Contacto</a>
           </span>
         </nav>
       </div>
     </div>
   </div>
 </header>
-
-<div class="hero hero--full hero--main parallax__container" data-anchor="home">
+<div class="small-menu small-menu--fillin" data-gumshoe-header>
+  <ul data-gumshoe class="small-menu__list">
+    <li class="small-menu__item">
+      <a title="Inicio" data-scroll href="#inicio" class="small-menu__link">
+        <span class="small-menu__text">
+        Inicio
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Amenidades" data-scroll href="#amenidades" class="small-menu__link">
+        <span class="small-menu__text">
+        Amenidades
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Apartamentos" data-scroll href="#apartamentos" class="small-menu__link">
+        <span class="small-menu__text">
+        Apartamentos
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Galeria" data-scroll href="#galeria" class="small-menu__link">
+        <span class="small-menu__text">
+        Galeria
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Ubicacion" data-scroll href="#ubicacion" class="small-menu__link">
+        <span class="small-menu__text">
+        Ubicacion
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Contacto" data-scroll href="#contacto" class="small-menu__link">
+        <span class="small-menu__text">
+        Contacto
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="hero hero--full hero--main parallax__container" id="inicio">
   <div class="parallax rellax" data-rellax-speed="-4" style="background-image: url('images/imagen-sala.jpg')"></div>
   <div class="vm-table">
     <div class="vm-table__cell">
@@ -66,13 +111,13 @@
         <p class="text--larger">
           GOLFTERRASSEN se abre camino como uno de los edificios de <br> apartamentos mas exclusivos de Barranquilla.
         </p>
-        <a href="#contacto">Contacto</a>
+        <a data-scroll class="button button--large button--wide button--primary text--separated uppercase color--brand-secondary weight--normal" href="#contacto">Contacto</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="pane pane--medium" data-anchor="search">
+<div class="pane pane--medium">
   <div class="container">
     <div class="grid grid--middle">
       <div class="grid__item medium--one-half">
@@ -83,8 +128,8 @@
           Su hogar en Golfterrassen estará equipado con accesorios de tecnología superior y decorado con finos acabados en el diseño interior. La vegetación de la extensa terraza social del conjunto le permitirá conectarse con la naturaleza, cuando dirija la mirada hacia los amplios ventanales de su apartamento o se asome desde su gran balcón.
         </p>
       </div><div class="grid__item medium--one-half">
-        <div>
-          <img src="images/terraza.jpg" alt="">
+        <div class="image-border image-border--primary image-border--bottom image-border--left big-shadow">
+         <img src="images/terraza.jpg" alt="">
         </div>
       </div>
     </div>
@@ -95,12 +140,11 @@
   <div class="parallax rellax" data-rellax-speed="-3" style="background-image: url('images/sala-terraza.jpg')"></div>
   <div class="vm-table">
     <div class="vm-table__cell">
-      <div class="container rellax" data-rellax-speed="-1">
+      <div class="container">
         <div class="grid grid--reverse">
           <div class="grid__item medium--one-half">
-            
           </div><div class="grid__item medium--one-half">
-            <p class="beta uppercase border-separator">
+            <p class="beta uppercase border-separator flush--top">
               Disfrute de una ubicación privilegiada en el barrio <span class="color--brand-primary">El Golf</span>.
             </p>
             <p class="line-height--large text--larger">
@@ -113,7 +157,7 @@
   </div>
 </div>
 
-<div class="pane pane--medium background--light" data-anchor="collections">
+<div class="pane pane--medium background--light" id="amenidades">
   <div class="container">
     <div class="grid grid--wide">
       <div class="grid__item medium--five-twelfths">
@@ -128,7 +172,7 @@
   </div>
 </div>
 
-<div class="pane">
+<div class="pane pane--small features">
   <div class="container">
     <div class="grid grid--middle grid--wide">
       <div class="grid__item medium--five-twelfths">
@@ -147,7 +191,7 @@
             <svg class="icon icon-5x color--brand-primary push-half--bottom">
               <use xlink:href="#icon-sun"></use>
             </svg>
-            <p class="color--brand-secondary">Ventilación e Iluminación natural</p>
+            <p class="color--brand-secondary">Ventilación e Iluminación natural.</p>
           </div><div class="grid__item one-half push--bottom">
             <svg class="icon icon-5x color--brand-primary push-half--bottom">
               <use xlink:href="#icon-pool"></use>
@@ -156,8 +200,10 @@
           </div>
         </div>
       </div><div class="grid__item medium--seven-twelfths">
-        <div class="" data-rellax-speed="1">
-          <img class="big-shadow" src="images/sala-clara.jpg" alt="">
+        <div class="rellax features__image features__image-first text--center" data-rellax-speed="1">
+          <div class="image-border image-border--primary image-border--top-middle image-border--right big-shadow">
+            <img class="big-shadow" src="images/sala-clara.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -183,51 +229,367 @@
             <svg class="icon icon-5x color--brand-primary push-half--bottom">
               <use xlink:href="#icon-level"></use>
             </svg>
-            <p class="color--brand-secondary">Ascensor privado con acceso exclusivo a su apartamento</p>
+            <p class="color--brand-secondary">Ascensor privado con acceso exclusivo a su apartamento.</p>
           </div>
         </div>
       </div><div class="grid__item medium--seven-twelfths">
-        <div class="" data-rellax-speed="2">
-          <img class="big-shadow" src="images/azotea.jpg" alt="">
+        <div class="rellax features__image features__image-last text--center" data-rellax-speed="-0.5">
+          <div class="image-border image-border--secondary image-border--bottom image-border--left">
+            <img class="big-shadow" src="images/azotea.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="pane pane--medium pane--apartments" data-anchor="collections">
+<div class="pane pane--medium pane--apartments" id="apartamentos">
   <div class="container">
     <h2 class="uppercase text--center border-separator border-separator--centered">Apartamentos</h2>
     <div class="panel">
-      <div class="panel__body">
-        <div style="display: flex; justify-content: space-around;">
-          <a class="color--text-body" href="#apartamento1">Apartamento TIPO A</a>
-          <a class="color--text-body" href="#apartamento2">Apartamento TIPO B</a>
-          <a class="color--text-body" href="#penthouse1">Penthouse TIPO A</a>
-          <a class="color--text-body" href="#penthause2">Penthouse TIPO B</a>
+      <div  class="panel__body">
+        <div data-tabs class="tabs">
+          <a data-tab class="tabs__tab color--text-body" href="#apartamento1">Apartamento TIPO A</a>
+          <a data-tab class="tabs__tab color--text-body" href="#apartamento2">Apartamento TIPO B</a>
+          <a data-tab class="tabs__tab color--text-body" href="#penthouse1">Penthouse TIPO A</a>
+          <a data-tab class="tabs__tab color--text-body" href="#penthouse2">Penthouse TIPO B</a>
         </div>
       </div>
-      <div class="vm-table">
-        <div class="vm-table__cell one-half vertical-align--top">
-          <div class="island">
-            <h2 class="delta weight--normal">Apartamento TIPO A <br> 290 m2</h2>
-            <ul class="list-unstyled">
-              <li class="push-half--bottom">Área cubierta de 292 m2.</li>
-              <li class="push-half--bottom">3 alcobas cada una con baño y balcón independiente.</li>
-              <li class="push-half--bottom">1 baño social.</li>
-              <li class="push-half--bottom">Sala.</li>
-              <li class="push-half--bottom">Comedor.</li>
-              <li class="push-half--bottom">Espacio para cinema.</li>
-              <li class="push-half--bottom">Gran balcón con acceso desde el comedor y la sala.</li>
-              <li class="push-half--bottom">Cocina con isla central.</li>
-              <li class="push-half--bottom">Zona de servicio con alcoba y baño independiente.</li>
-              <li class="push-half--bottom">Estar de alcobas.</li>
-            </ul>
+      <div data-tabs-content>
+        <div data-tabs-pane class="tabs-pane active" id="apartamento1">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Apartamento TIPO A <br>
+                  <span class="text--small">292 m2 - 3 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 292 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    1 baño social.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el comedor y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="vm-table__cell one-half vertical-align--top background-color--ui">
-          <div class="island">
-            <img src="images/apartamento-a.jpg" alt="">
+        <div data-tabs-pane class="tabs-pane" id="apartamento2">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Apartamento TIPO B <br>
+                  <span class="text--small">367 m2 - 4 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    4 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    2 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde la sala y el cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas con balcón.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="penthouse1">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Penthouse TIPO A <br>
+                  <span class="text--small">453 m2 - 2 plantas - 4 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza de 126 m2 en segundo piso.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 453,56 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza en segunda planta de 126,26 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    4 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el cinema y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas en la segunda planta.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="penthouse2">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Penthouse TIPO B <br>
+                  <span class="text--small">591 m2 - 2 plantas - 5 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza de 151 m2 en segundo piso.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 591,96 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza en segunda planta de 151,7 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    5 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Dos espacios para comedores.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el cinema y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala de estar en primera planta junto a las escaleras.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas en segunda planta.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -235,7 +597,7 @@
   </div>
 </div>
 
-<div class="hero hero--full hero--green" data-anchor="">
+<div class="hero hero--full hero--green">
   <div class="vm-table">
     <div class="vm-table__cell">
       <div class="container">
@@ -244,8 +606,8 @@
             <p class="beta uppercase border-separator border-separator--white">
               Construya su hogar en un conjunto amigable con el <span class="">medio ambiente</span>.
             </p>
-            <p class="line-height--larger text--large">
-              Así mismo hemos reflejado el componente ecológico de las políticas ambientales de GOLFTERRASSEN, en la selección de los colores verde claro, verde oscuro y blanco.
+            <p class="line-height--larger text--larger">
+              Nuestra política ambiental incluye la preservación de una amplia zona verde en la terraza social, cuidada con un sistema de riego de agua reciclada.
             </p>
           </div>
           <div class="grid__item medium--one-half"></div>
@@ -255,7 +617,7 @@
   </div>
 </div>
 
-<div data-anchor="">
+<div id="galeria">
   <div class="pane">
     <h2 class="text--center uppercase color--brand-secondary border-separator border-separator--centered">
       GALERÍA
@@ -264,115 +626,143 @@
   <div class="grid grid--full gallery js-gallery">
     <div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/banio.jpg" title="Titulo">
+        <a class="gallery__link" href="images/banio.jpg" title="Titulo">
           <img class="one-whole" src="images/banio.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/alcohoba.jpg" title="Titulo">
+        <a class="gallery__link" href="images/alcohoba.jpg" title="Titulo">
           <img class="one-whole" src="images/alcohoba.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/escaleras.jpg" title="Titulo">
+        <a class="gallery__link" href="images/escaleras.jpg" title="Titulo">
           <img class="one-whole" src="images/escaleras.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/cocina.jpg" title="Titulo">
+        <a class="gallery__link" href="images/cocina.jpg" title="Titulo">
           <img class="one-whole" src="images/cocina.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/alcohoba-2.jpg" title="Titulo">
+        <a class="gallery__link" href="images/alcohoba-2.jpg" title="Titulo">
           <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/estudio.jpg" title="Titulo">
+        <a class="gallery__link" href="images/estudio.jpg" title="Titulo">
           <img class="one-whole" src="images/estudio.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/terraza-2.jpg" title="Titulo">
+        <a class="gallery__link" href="images/terraza-2.jpg" title="Titulo">
           <img class="one-whole" src="images/terraza-2.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div><div class="grid__item one-half medium--one-quarter">
       <div class="gallery__item">
-        <a href="images/sala-comedor.jpg" title="Titulo">
+        <a class="gallery__link" href="images/sala-comedor.jpg" title="Titulo">
           <img class="one-whole" src="images/sala-comedor.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="pane pane--topo" data-anchor="get">
+<div class="pane pane--medium pane--topo" id="ubicacion">
   <div class="container">
-    <section>
-      <h2 class="uppercase color--brand-secondary border-separator">
-        UBICACIÓN
-      </h2>
-      <p class="line-height--larger">
-        Carrrera 58 # 79 - 12 <br> Barranquilla - Colombia
-      </p>
-      <div>
-        map
+    <section class="background--white big-shadow">
+      <div class="island">
+        <h2 class="uppercase color--brand-secondary border-separator">
+          UBICACIÓN
+        </h2>
+        <p class="line-height--larger">
+          Carrrera 58 # 79 - 12 <br> Barranquilla - Colombia
+        </p>
       </div>
+      <div class="map" id="map-canvas"></div>
     </section>
   </div>
 </div>
 
-<div class="pane" data-anchor="get">
+<div class="pane" id="contacto">
   <div class="container">
     <h2 class="uppercase color--brand-secondary border-separator">
       LLÁMENOS O ESCRIBÁNOS PARA <br> RECIBIR INFORMACIÓN
     </h2>
     <section class="grid">
       <div class="grid__item medium--one-half">
-        <form action="">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="email">Correo Electronico</label>
-            <input id="email" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input id="telefono" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea class="form-control" placeholder="Escribe un mensaje" name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
-          </div>
-          <button class="button button--large button--primary" type="submit">Enviar Mensaje</button>
-        </form>
+        <div class="">
+          <form action="">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electronico</label>
+              <input id="email" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" placeholder="Escribe un mensaje" name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
+            </div>
+            <button class="button button--large button--wide button--primary" type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
       </div><div class="grid__item medium--one-half">
-        <h3>Teléfonos</h3>
-        <p>
-          +57 317-5100255,<br>
-          +575 3044311
-        </p>
-        <h3>Correo Electrónico</h3>
-        <p>
-          gerente@hglconstructores.com
-        </p>
-        <h3>Direccion Sala de Ventas</h3>
-        <p>
-          Carrera 45 # 80 - 285 <br>
-          Oficina 205  <br>
-          Centro Comercial Sparta <br>
-          Barranquilla - Colombia
-        </p>
+        <div class="">
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Teléfonos</h3>
+          <p>
+            +57 317-5100255,<br>
+            +575 3044311
+          </p>
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Correo Electrónico</h3>
+          <p>
+            gerente@hglconstructores.com
+          </p>
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Direccion Sala de Ventas</h3>
+          <p>
+            Carrera 45 # 80 - 285 <br>
+            Oficina 205  <br>
+            Centro Comercial Sparta <br>
+            Barranquilla - Colombia
+          </p>
+        </div>
       </div>
     </section>
   </div>
@@ -381,12 +771,16 @@
 <div class="pane pane--medium" data-anchor="get">
   <div class="container">
     <div class="grid grid--middle">
-      <div class="grid__item medium--one-half">
-        <span>Construye</span>
-        <img src="images/hgl-logo.jpg" alt="">
-      </div><div class="grid__item medium--one-half">
-        <span>Financia</span>
-        <img src="images/schroeder-logo.svg" alt="">
+      <div class="grid__item medium--one-half text--center">
+        <div class="soft-half--ends">
+          <span class="push-half--right">Construye</span>
+          <img src="images/hgl-logo.jpg" alt="">
+        </div>
+      </div><div class="grid__item medium--one-half text--center">
+        <div class="soft-half--ends">
+          <span class="push-half--right">Financia</span>
+          <img src="images/schroeder-logo.svg" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -399,35 +793,37 @@
         <div class="grid__item medium--one-third text--center">
           <img width="210" src="images/logo.svg" alt="">
         </div><div class="grid__item medium--two-thirds">
-          <h4 class="color--brand-primary weight--normal">Enlaces</h4>
-          <div class="push--bottom">
-            <a class="uppercase soft-half--right" href="#inicio">Inicio</a>
-            <a class="uppercase soft-half--right" href="#amenidades">Amenidades</a>
-            <a class="uppercase soft-half--right" href="#apartamentos">Apartamentos</a>
-            <a class="uppercase soft-half--right" href="#galeria">Galeria</a>
-            <a class="uppercase soft-half--right" href="#ubicacion">Ubicacion</a>
-            <a class="uppercase soft-half--left" href="#contacto">Contacto</a>
+          <h4 class="color--brand-primary weight--normal text--small text--center medium--text-start">Enlaces</h4>
+          <div class="push--bottom text--smaller nav-block--medium">
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#inicio">Inicio</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#amenidades">Amenidades</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#apartamentos">Apartamentos</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#galeria">Galeria</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#ubicacion">Ubicacion</a>
+            <a data-scroll class="uppercase text--separated nav-block__item"  href="#contacto">Contacto</a>
           </div>
 
-          <h4 class="color--brand-primary weight--normal">Redes Sociales</h4>
-          <a class="soft-half--right" href="#">
-            <svg class="icon icon-lg color--brand-primary">
-              <use xlink:href="#icon-facebook"></use>
-            </svg>
-            /hglconstructor
-          </a>
-          <a class="soft-half--right" href="#">
-            <svg class="icon icon-lg color--brand-primary">
-              <use xlink:href="#icon-twitter"></use>
-            </svg>
-            @hglconstructor
-          </a>
-          <a class="soft-half--right" href="#">
-            <svg class="icon icon-lg color--brand-primary">
-              <use xlink:href="#icon-instagram"></use>
-            </svg>
-            @hglconstructores
-          </a>
+          <h4 class="color--brand-primary weight--normal text--small text--center medium--text-start">Redes Sociales</h4>
+          <div class="push--bottom nav-block--medium">
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+              /hglconstructor
+            </a>
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+              @hglconstructor
+            </a>
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+              @hglconstructores
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -446,8 +842,23 @@
   document.querySelector('#copy-year').innerText = d
 </script>
 <div>
-  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+  <symbol id="icon-check" viewBox="0 0 32 32">
+  <title>check</title>
+  <path d="M16 31.111c-8.346 0-15.111-6.765-15.111-15.111s6.765-15.111 15.111-15.111c8.346 0 15.111 6.765 15.111 15.111s-6.765 15.111-15.111 15.111zM16 29.333c7.364 0 13.333-5.97 13.333-13.333s-5.97-13.333-13.333-13.333c-7.364 0-13.333 5.97-13.333 13.333s5.97 13.333 13.333 13.333z"></path>
+  <path d="M9.517 13.594l-1.257 1.257 5.962 5.962 9.517-9.517-1.257-1.257-8.26 8.26z"></path>
+  </symbol>
+  <symbol id="icon-more" viewBox="0 0 32 32">
+  <title>more</title>
+  <path d="M16.356 8.533h-0.356v7.289h-7.289v0.356h7.289v7.289h0.356v-7.289h7.289v-0.356h-7.289z"></path>
+  <path d="M16 0.178c-8.739 0-15.822 7.084-15.822 15.822s7.084 15.822 15.822 15.822c8.738 0 15.822-7.084 15.822-15.822s-7.084-15.822-15.822-15.822zM16 31.467c-8.542 0-15.467-6.925-15.467-15.467s6.925-15.467 15.467-15.467c8.542 0 15.467 6.925 15.467 15.467s-6.925 15.467-15.467 15.467z"></path>
+  </symbol>
+  <symbol id="icon-down" viewBox="0 0 32 32">
+  <title>down</title>
+  <path d="M0.97 0.97v30.061h30.061v-30.061h-30.061zM0 0h32v32h-32v-32z"></path>
+  <path d="M15.523 22.556v-16.738h0.964v16.738l5.144-5.144 0.682 0.682-6.148 6.148-0.16-0.16-0.16 0.16-6.148-6.148 0.682-0.682z"></path>
+  </symbol>
   <symbol id="icon-facebook" viewBox="0 0 32 32">
   <title>facebook</title>
   <path d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16zM20.022 16.626l0.378-3.672h-3.233v-2.163c0-0.811 0.536-1.002 0.918-1.002h2.325v-3.568l-3.204-0.013c-3.556 0-4.364 2.664-4.364 4.365v2.379h-2.057v3.676h2.057v10.459h4.326v-10.459h2.855z"></path>
@@ -464,8 +875,8 @@
   <title>level</title>
   <path d="M29.337 32h-26.675c-1.468 0-2.663-1.194-2.663-2.662v-26.675c0-1.468 1.194-2.662 2.663-2.662h26.675c1.468 0 2.663 1.194 2.663 2.662v26.675c-0 1.468-1.195 2.663-2.663 2.663zM2.663 0.951c-0.944 0-1.712 0.768-1.712 1.711v26.675c0 0.944 0.768 1.712 1.712 1.712h26.675c0.944 0 1.712-0.768 1.712-1.712v-26.675c0-0.944-0.768-1.711-1.712-1.711h-26.675zM27.209 28.458h-22.419c-0.689 0-1.248-0.56-1.248-1.249v-22.419c0-0.689 0.56-1.248 1.248-1.248h22.419c0.689 0 1.249 0.56 1.249 1.248v22.419c0 0.689-0.56 1.249-1.249 1.249zM16.476 27.507h10.734c0.164 0 0.298-0.134 0.298-0.298v-22.419c0-0.164-0.134-0.297-0.298-0.297h-10.734v1.901h2.074c1.023 0 1.856 0.833 1.856 1.856v0.028c0 1.024-0.833 1.856-1.856 1.856h-2.074v17.372zM4.791 4.493c-0.164 0-0.297 0.134-0.297 0.297v22.419c0 0.164 0.134 0.298 0.297 0.298h10.734v-17.372h-2.074c-1.024 0-1.856-0.833-1.856-1.856v-0.028c0-1.024 0.833-1.856 1.856-1.856h2.074v-1.901h-10.734zM13.45 7.345c-0.499 0-0.905 0.406-0.905 0.905v0.028c0 0.499 0.406 0.905 0.905 0.905h5.1c0.499 0 0.905-0.406 0.905-0.905v-0.028c0-0.499-0.406-0.905-0.905-0.905h-5.1z"></path>
   </symbol>
-  <symbol id="icon-more" viewBox="0 0 32 32">
-  <title>more</title>
+  <symbol id="icon-more2" viewBox="0 0 32 32">
+  <title>more2</title>
   <path d="M16 8.364h0.364v15.273h-0.364z"></path>
   <path d="M23.818 15.818v0.364h-15.273v-0.364z"></path>
   </symbol>
@@ -500,7 +911,7 @@
   <path d="M29.541 32h-27.113c-0.271 0-0.49-0.219-0.49-0.49v-2.13c0-0.271 0.219-0.49 0.49-0.49h1.899v-28.4c0-0.271 0.219-0.49 0.49-0.49h22.335c0.271 0 0.49 0.219 0.49 0.49v28.4h1.899c0.271 0 0.49 0.219 0.49 0.49v2.13c0 0.27-0.219 0.49-0.49 0.49zM2.917 31.020h26.134v-1.151h-26.134v1.151zM5.306 28.89h21.355v-27.911h-21.355v27.911zM25.192 27.886h-8.229c-0.271 0-0.49-0.219-0.49-0.49v-25.078c0-0.271 0.219-0.49 0.49-0.49h8.228c0.271 0 0.49 0.219 0.49 0.49v25.078c0 0.271-0.219 0.49-0.49 0.49zM17.453 26.906h7.249v-3c-0.493-0.589-2.242-2.9-3.659-7.534-1.42-4.649-2.081-11.699-2.237-13.563h-1.353v24.098zM19.791 2.808c0.168 1.946 0.836 8.846 2.19 13.277 0.925 3.027 1.996 5.019 2.722 6.147v-19.424h-1.596c0.087 1.093 0.33 3.662 0.79 5.287 0.074 0.26-0.078 0.531-0.338 0.605s-0.531-0.078-0.605-0.338c-0.5-1.768-0.747-4.477-0.831-5.554h-0.531c0.127 1.39 0.499 5.195 0.986 7.575 0.054 0.265-0.117 0.524-0.382 0.578s-0.524-0.117-0.578-0.382c-0.514-2.514-0.892-6.443-1.011-7.771h-0.817zM15.004 27.886h-8.229c-0.271 0-0.49-0.219-0.49-0.49v-25.078c0-0.271 0.219-0.49 0.49-0.49h8.229c0.271 0 0.49 0.219 0.49 0.49v25.078c0 0.271-0.219 0.49-0.49 0.49zM7.265 26.906h7.249v-24.098h-1.353c-0.156 1.864-0.817 8.915-2.237 13.563-1.416 4.634-3.165 6.945-3.659 7.534v3zM7.265 2.808v19.419c0.728-1.133 1.801-3.129 2.722-6.142 1.354-4.432 2.022-11.332 2.19-13.277h-1.011c-0.119 1.329-0.496 5.258-1.011 7.772-0.054 0.265-0.314 0.435-0.578 0.382-0.265-0.054-0.436-0.313-0.382-0.578 0.487-2.381 0.86-6.185 0.986-7.575h-0.532c-0.083 1.077-0.331 3.786-0.831 5.554-0.073 0.26-0.344 0.412-0.604 0.338s-0.412-0.344-0.338-0.605c0.46-1.626 0.703-4.194 0.79-5.287h-1.402z"></path>
   </symbol>
   </defs>
-  </svg>
+</svg>
 </div>
 </body>
 </html>

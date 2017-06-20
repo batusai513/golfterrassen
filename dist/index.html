@@ -17,311 +17,752 @@
 <!--  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="images/favicon-48x48.png" sizes="48x48">-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcASZRoMYhQW-PQiReMjB1fuexuGT1lSI&libraries=places"></script>
 </head>
 <body>
 <header class="main-header main-header--positioned">
   <div class="wrapper">
     <div class="grid grid--middle">
-      <div class="grid__item one-third">
-        <h1 class="flush">
+      <div class="grid__item medium--one-quarter">
+        <h1 class="main-header__logo">
           <a href="#inicio">
             <img src="images/logo.svg" alt="GolfTerrassen - Apartamentos">
           </a>
         </h1>
-      </div><div class="grid__item two-thirds">
-        <nav class="main-navigation">
+      </div><div class="grid__item medium--three-quarters">
+        <nav class="main-navigation js-menu">
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a href="#inicio">Inicio</a>
+            <a data-scroll class="js-menu-link" href="#inicio">Inicio</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a href="#amenidades">Amenidades</a>
+            <a data-scroll class="js-menu-link" href="#amenidades">Amenidades</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a href="#apartamentos">Apartamentos</a>
+            <a data-scroll class="js-menu-link" href="#apartamentos">Apartamentos</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a href="#galeria">Galeria</a>
+            <a data-scroll class="js-menu-link" href="#galeria">Galeria</a>
           </span>
           <span class="main-navigation__item main-navigation__item--has-border">
-            <a href="#ubicacion">Ubicacion</a>
+            <a data-scroll class="js-menu-link" href="#ubicacion">Ubicacion</a>
           </span>
-          <span>
-            <a href="#contacto">Contacto</a>
+          <span class="main-navigation__item">
+            <a data-scroll class="js-menu-link" href="#contacto">Contacto</a>
           </span>
         </nav>
       </div>
     </div>
   </div>
 </header>
-
-<div class="hero hero--main vm-table" data-anchor="home">
-  <div class="vm-table__cell">
-    <div class="container">
-      <p class="alpha">
-        2 TORRES LLENAS DE NATURALEZA, <br> CONFORT, TECNOLOGÍA Y EXCLUSIVIDAD
-      </p>
-      <p class="text--larger">
-        GOLFTERRASSEN se abre camino como uno de los edificios de <br> apartamentos mas exclusivos de Barranquilla.
-      </p>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
+<div class="small-menu small-menu--fillin" data-gumshoe-header>
+  <ul data-gumshoe class="small-menu__list">
+    <li class="small-menu__item">
+      <a title="Inicio" data-scroll href="#inicio" class="small-menu__link">
+        <span class="small-menu__text">
+        Inicio
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Amenidades" data-scroll href="#amenidades" class="small-menu__link">
+        <span class="small-menu__text">
+        Amenidades
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Apartamentos" data-scroll href="#apartamentos" class="small-menu__link">
+        <span class="small-menu__text">
+        Apartamentos
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Galeria" data-scroll href="#galeria" class="small-menu__link">
+        <span class="small-menu__text">
+        Galeria
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Ubicacion" data-scroll href="#ubicacion" class="small-menu__link">
+        <span class="small-menu__text">
+        Ubicacion
+        </span>
+      </a>
+    </li>
+    <li class="small-menu__item">
+      <a title="Contacto" data-scroll href="#contacto" class="small-menu__link">
+        <span class="small-menu__text">
+        Contacto
+        </span>
+      </a>
+    </li>
+  </ul>
 </div>
-
-<div class="pane" data-anchor="search">
-  <div class="container">
-    <div class="grid grid--middle">
-      <div class="grid__item one-half">
-        <h2 class="uppercase">
-          Su hogar en un ambiente que mezcla naturaleza, confort, tecnología y  exclusividad
-        </h2>
-        <p class="line-height--large">
-          Su hogar en GOLFTERRASSEN será reservado y exclusivo, equipado con accesorios de tecnología alemana y decorado con finos acabados en el diseño interior. La vegetación de la extensa terraza social del conjunto le permitirá conectarse con la naturaleza, cuando dirija la mirada hacia los amplios ventanales de su apartamento o se asome desde su gran balcón.
+<div class="hero hero--full hero--main parallax__container" id="inicio">
+  <div class="parallax rellax" data-rellax-speed="-4" style="background-image: url('images/imagen-sala.jpg')"></div>
+  <div class="vm-table">
+    <div class="vm-table__cell">
+      <div class="container rellax" data-rellax-speed="-1">
+        <p class="alpha border-separator">
+          2 TORRES LLENAS DE NATURALEZA, <br> CONFORT, TECNOLOGÍA Y EXCLUSIVIDAD
         </p>
-      </div><div class="grid__item one-half">
-        <img style="margin-top: -5em;" src="images/terraza.jpg" alt="">
+        <p class="text--larger">
+          GOLFTERRASSEN se abre camino como uno de los edificios de <br> apartamentos mas exclusivos de Barranquilla.
+        </p>
+        <a data-scroll class="button button--large button--wide button--primary text--separated uppercase color--brand-secondary weight--normal" href="#contacto">Contacto</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="hero hero--terrace vm-table" data-anchor="radio">
-  <div class="vm-table__cell">
-    <div class="container">
-      <div class="grid grid--reverse">
-        <div class="grid__item one-half">
-          
-        </div><div class="grid__item one-half">
-          <p class="beta uppercase">
-            <span class="color--brand-primary">GOLFTERRASSEN</span> es una palabra compuesta en alemán que traducida al español significa <span class="color--brand-primary">Terrazas de Golf</span>
-          </p>
-          <p class="line-height--larger">
-            Hemos creado este nombre para su hogar, haciendo referencia al ambiente amplio y natural que predomina en el diseño general del conjunto. 
-          </p>
+<div class="pane pane--medium">
+  <div class="container">
+    <div class="grid grid--middle">
+      <div class="grid__item medium--one-half">
+        <h2 class="uppercase border-separator">
+          Su hogar en un ambiente que mezcla naturaleza, confort, tecnología y exclusividad
+        </h2>
+        <p class="line-height--large">
+          Su hogar en Golfterrassen estará equipado con accesorios de tecnología superior y decorado con finos acabados en el diseño interior. La vegetación de la extensa terraza social del conjunto le permitirá conectarse con la naturaleza, cuando dirija la mirada hacia los amplios ventanales de su apartamento o se asome desde su gran balcón.
+        </p>
+      </div><div class="grid__item medium--one-half">
+        <div class="image-border image-border--primary image-border--bottom image-border--left big-shadow">
+         <img src="images/terraza.jpg" alt="">
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="pane" data-anchor="collections">
+<div class="hero hero--full parallax__container hero--terrace">
+  <div class="parallax rellax" data-rellax-speed="-3" style="background-image: url('images/sala-terraza.jpg')"></div>
+  <div class="vm-table">
+    <div class="vm-table__cell">
+      <div class="container">
+        <div class="grid grid--reverse">
+          <div class="grid__item medium--one-half">
+          </div><div class="grid__item medium--one-half">
+            <p class="beta uppercase border-separator flush--top">
+              Disfrute de una ubicación privilegiada en el barrio <span class="color--brand-primary">El Golf</span>.
+            </p>
+            <p class="line-height--large text--larger">
+              Hoteles, Centros Comerciales, Club y numerosos restaurantes reconocidos que le darán acceso a una vida nocturna tranquila con gran variedad gastronómica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pane pane--medium background--light" id="amenidades">
   <div class="container">
-    <div class="grid">
-      <div class="grid__item five-twelfths">
-        <h2 class="uppercase color--brand-secondary">
+    <div class="grid grid--wide">
+      <div class="grid__item medium--five-twelfths">
+        <h2 class="uppercase color--brand-secondary border-separator">
           EN GOLFTERRASEN <br> ENCONTRARÁ
         </h2>
         <p class="line-height--large">
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu lectus non odio scelerisque malesuada. Mauris sit amet ipsum risus. Mauris eu nibh dolor. 
+          Materiales de construcción de la más alta calidad conjugados en espacios imponentes.
         </p>
       </div>
-      <div class="grid__item seven-twelfths">
+    </div>
+  </div>
+</div>
 
+<div class="pane pane--small features">
+  <div class="container">
+    <div class="grid grid--middle grid--wide">
+      <div class="grid__item medium--five-twelfths">
+        <div class="grid">
+          <div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-quality"></use>
+            </svg>
+            <p class="color--brand-secondary">Lujosos acabados en diseño interior y exterior.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-shower"></use>
+            </svg>
+            <p class="color--brand-secondary">Accesorios importados para baños y cocinas.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-sun"></use>
+            </svg>
+            <p class="color--brand-secondary">Ventilación e Iluminación natural.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-pool"></use>
+            </svg>
+            <p class="color--brand-secondary">Gimnasio, piscina con baños y duchas y salón para evento.</p>
+          </div>
+        </div>
+      </div><div class="grid__item medium--seven-twelfths">
+        <div class="rellax features__image features__image-first text--center" data-rellax-speed="1">
+          <div class="image-border image-border--primary image-border--top-middle image-border--right big-shadow">
+            <img class="big-shadow" src="images/sala-clara.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid--rev grid--middle grid--wide">
+      <div class="grid__item medium--five-twelfths">
+        <div class="grid">
+          <div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-window"></use>
+            </svg>
+            <p class="color--brand-secondary">Ventanas con sistema de vidrios termo-acústicos.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-green"></use>
+            </svg>
+            <p class="color--brand-secondary">Extensa zona verde dotada con sistema de riego de agua reciclada.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-umbrella"></use>
+            </svg>
+            <p class="color--brand-secondary">Penthouses de dos pisos con terrazas extensas.</p>
+          </div><div class="grid__item one-half push--bottom">
+            <svg class="icon icon-5x color--brand-primary push-half--bottom">
+              <use xlink:href="#icon-level"></use>
+            </svg>
+            <p class="color--brand-secondary">Ascensor privado con acceso exclusivo a su apartamento.</p>
+          </div>
+        </div>
+      </div><div class="grid__item medium--seven-twelfths">
+        <div class="rellax features__image features__image-last text--center" data-rellax-speed="-0.5">
+          <div class="image-border image-border--secondary image-border--bottom image-border--left">
+            <img class="big-shadow" src="images/azotea.jpg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
+<div class="pane pane--medium pane--apartments" id="apartamentos">
+  <div class="container">
+    <h2 class="uppercase text--center border-separator border-separator--centered">Apartamentos</h2>
+    <div class="panel">
+      <div  class="panel__body">
+        <div data-tabs class="tabs">
+          <a data-tab class="tabs__tab color--text-body" href="#apartamento1">Apartamento TIPO A</a>
+          <a data-tab class="tabs__tab color--text-body" href="#apartamento2">Apartamento TIPO B</a>
+          <a data-tab class="tabs__tab color--text-body" href="#penthouse1">Penthouse TIPO A</a>
+          <a data-tab class="tabs__tab color--text-body" href="#penthouse2">Penthouse TIPO B</a>
+        </div>
+      </div>
+      <div data-tabs-content>
+        <div data-tabs-pane class="tabs-pane active" id="apartamento1">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Apartamento TIPO A <br>
+                  <span class="text--small">292 m2 - 3 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 292 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    1 baño social.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el comedor y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="apartamento2">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Apartamento TIPO B <br>
+                  <span class="text--small">367 m2 - 4 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    4 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    2 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde la sala y el cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas con balcón.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="penthouse1">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Penthouse TIPO A <br>
+                  <span class="text--small">453 m2 - 2 plantas - 4 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza de 126 m2 en segundo piso.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 453,56 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza en segunda planta de 126,26 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    4 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Comedor.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el cinema y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas en la segunda planta.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="penthouse2">
+          <div class="vm-table--medium">
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top">
+              <div class="island">
+                <h2 class="push--bottom delta weight--normal">Penthouse TIPO B <br>
+                  <span class="text--small">591 m2 - 2 plantas - 5 alcobas - Cinema - Gran Balcón</span>
+                </h2>
+                <ul class="list-unstyled">
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza de 151 m2 en segundo piso.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Área cubierta de 591,96 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Terraza en segunda planta de 151,7 m2.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    5 alcobas cada una con baño y balcón independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    3 baños sociales.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Dos espacios para comedores.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Espacio para cinema.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Gran balcón con acceso desde el cinema y la sala.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Cocina con isla central.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Zona de servicio con alcoba y baño independiente.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Sala de estar en primera planta junto a las escaleras.
+                  </li>
+                  <li class="push-half--bottom">
+                    <svg class="icon color--brand-primary icon-lg" style="margin-right: 4px;">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                    Estar de alcobas en segunda planta.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vm-table__cell--medium medium--one-half vertical-align--top background-color--ui">
+              <div class="island">
+                <img src="images/apartamento-a.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero hero--full hero--green">
+  <div class="vm-table">
+    <div class="vm-table__cell">
+      <div class="container">
+        <div class="grid">
+          <div class="grid__item medium--one-half">
+            <p class="beta uppercase border-separator border-separator--white">
+              Construya su hogar en un conjunto amigable con el <span class="">medio ambiente</span>.
+            </p>
+            <p class="line-height--larger text--larger">
+              Nuestra política ambiental incluye la preservación de una amplia zona verde en la terraza social, cuidada con un sistema de riego de agua reciclada.
+            </p>
+          </div>
+          <div class="grid__item medium--one-half"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="galeria">
   <div class="pane">
-    <div class="container">
-      <div class="grid grid--middle">
-        <div class="grid__item five-twelfths">
-          <div class="grid">
-            <div class="grid__item one-half">
-              <p class="color--brand-secondary">Lujosos acabados en diseño interior y exterior.</p>
-            </div><div class="grid__item one-half">
-              <p class="color--brand-secondary">Accesorios de calidad superior alemanes e italianos para baños y cocinas.</p>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__item one-half">
-              <p class="color--brand-secondary">Ventilación e Iluminación natural</p>
-            </div><div class="grid__item one-half">
-              <p class="color--brand-secondary">Gimnasio, piscina con baños y duchas y salón para evento.</p>
-            </div>
-          </div>
-        </div><div class="grid__item seven-twelfths">
-          <img src="images/sala-clara.jpg" alt="">
-        </div>
-      </div>
-      <div class="grid grid--middle">
-        <div class="grid__item seven-twelfths">
-          <img src="images/azotea.jpg" alt="">
-        </div><div class="grid__item five-twelfths">
-          <div class="grid">
-            <div class="grid__item one-half">
-              <p class="color--brand-secondary">Ventanas con sistema de vidrios termo-acústicos.</p>
-            </div><div class="grid__item one-half">
-              <p class="color--brand-secondary">Extensa zona verde dotada con sistema de riego de agua reciclada.</p>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__item one-half">
-              <p class="color--brand-secondary">Penthouses de dos pisos con terrazas extensas.</p>
-            </div><div class="grid__item one-half">
-              <p class="color--brand-secondary">Ascensor privado con acceso exclusivo a su apartamento</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="pane pane--medium pane--apartments" data-anchor="collections">
-  <div class="container">
-    <h2 class="text--center uppercase color--white flush--top">
-      APARTAMENTOS
+    <h2 class="text--center uppercase color--brand-secondary border-separator border-separator--centered">
+      GALERÍA
     </h2>
-    <div>
-      <div>
-        <a href="#apartamento1">Apartamento TIPO A</a>
-        <a href="#apartamento2">Apartamento TIPO B</a>
-        <a href="#penthouse1">Penthouse TIPO A</a>
-        <a href="#penthause2">Penthouse TIPO B</a>
-      </div>
-
-      <section>
-        <div>
-          <h2>Apartamento TIPO A <br> 290 m2</h2>
-          <ul>
-            <li>Área cubierta de 292 m2.</li>
-            <li>3 alcobas cada una con baño y balcón independiente.</li>
-            <li>1 baño social.</li>
-            <li>Sala.</li>
-            <li>Comedor.</li>
-            <li>Espacio para cinema.</li>
-            <li>Gran balcón con acceso desde el comedor y la sala.</li>
-            <li>Cocina con isla central.</li>
-            <li>Zona de servicio con alcoba y baño independiente.</li>
-            <li>Estar de alcobas.</li>
-          </ul>
-        </div>
-        <div>
-          <img src="" alt="">
-        </div>
-      </section>
-    </div>
   </div>
-</div>
-
-<div class="hero hero--green vm-table" data-anchor="get">
-  <div class="vm-table__cell">
-    <div class="container">
-      <div class="grid">
-        <div class="grid__item one-half">
-          <p class="beta uppercase">
-            Admiramos y cuidamos la naturaleza: Vegetación extensa, reutilización de agua para riego de plantas.
-          </p>
-          <p class="line-height--larger">
-            Así mismo hemos reflejado el componente ecológico de las políticas ambientales de GOLFTERRASSEN, en la selección de los colores verde claro, verde oscuro y blanco.
-          </p>
-        </div>
-        <div class="grid__item one-half"></div>
+  <div class="grid grid--full gallery js-gallery">
+    <div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/banio.jpg" title="Titulo">
+          <img class="one-whole" src="images/banio.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="" data-anchor="get">
-  <h2 class="text-align--center uppercase color--brand-secondary">
-    GALERÍA
-  </h2>
-  <div class="grid grid--full">
-    <div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/alcohoba.jpg" title="Titulo">
+          <img class="one-whole" src="images/alcohoba.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/escaleras.jpg" title="Titulo">
+          <img class="one-whole" src="images/escaleras.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/cocina.jpg" title="Titulo">
+          <img class="one-whole" src="images/cocina.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/alcohoba-2.jpg" title="Titulo">
+          <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/estudio.jpg" title="Titulo">
+          <img class="one-whole" src="images/estudio.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/terraza-2.jpg" title="Titulo">
+          <img class="one-whole" src="images/terraza-2.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
-      </div>
-    </div><div class="grid__item one-quarter">
-      <div>
-        <img class="one-whole" src="images/alcohoba-2.jpg" alt="">
+    </div><div class="grid__item one-half medium--one-quarter">
+      <div class="gallery__item">
+        <a class="gallery__link" href="images/sala-comedor.jpg" title="Titulo">
+          <img class="one-whole" src="images/sala-comedor.jpg" alt="">
+          <svg class="gallery__icon icon">
+            <use xlink:href="#icon-more"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="pane pane--topo" data-anchor="get">
+<div class="pane pane--medium pane--topo" id="ubicacion">
   <div class="container">
-    <section>
-      <h2 class="uppercase color--brand-secondary">
-        UBICACIÓN
-      </h2>
-      <p class="line-height--larger">
-        Carrrera 58 # 79 - 12 <br> Barranquilla - Colombia
-      </p>
-      <div>
-        map
+    <section class="background--white big-shadow">
+      <div class="island">
+        <h2 class="uppercase color--brand-secondary border-separator">
+          UBICACIÓN
+        </h2>
+        <p class="line-height--larger">
+          Carrrera 58 # 79 - 12 <br> Barranquilla - Colombia
+        </p>
       </div>
+      <div class="map" id="map-canvas"></div>
     </section>
   </div>
 </div>
 
-<div class="pane" data-anchor="get">
+<div class="pane" id="contacto">
   <div class="container">
+    <h2 class="uppercase color--brand-secondary border-separator">
+      LLÁMENOS O ESCRIBÁNOS PARA <br> RECIBIR INFORMACIÓN
+    </h2>
     <section class="grid">
-      <div class="grid__item one-half">
-        <h2 class="uppercase color--brand-secondary">
-          LLÁMENOS O ESCRIBÁNOS PARA <br> RECIBIR INFORMACIÓN
-        </h2>
-        <form action="">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="email">Correo Electronico</label>
-            <input id="email" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input id="telefono" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea class="form-control" placeholder="Escribe un mensaje" name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
-          </div>
-          <button type="submit">Enviar Mensaje</button>
-        </form>
-      </div><div class="grid__item one-half">
-        <h3>Teléfonos</h3>
-        <p>
-          +57 317-5100255,<br>
-          +575 3044311
-        </p>
-        <h3>Correo Electrónico</h3>
-        <p>
-          gerente@hglconstructores.com
-        </p>
-        <h3>Direccion Sala de Ventas</h3>
-        <p>
-          Carrera 45 # 80 - 285 <br> 
-          Oficina 205  <br>
-          Centro Comercial Sparta <br>
-          Barranquilla - Colombia
-        </p>
+      <div class="grid__item medium--one-half">
+        <div class="">
+          <form action="">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electronico</label>
+              <input id="email" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" placeholder="Escribe un mensaje" name="mensaje" id="mensaje" cols="30" rows="6"></textarea>
+            </div>
+            <button class="button button--large button--wide button--primary" type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div><div class="grid__item medium--one-half">
+        <div class="">
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Teléfonos</h3>
+          <p>
+            +57 317-5100255,<br>
+            +575 3044311
+          </p>
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Correo Electrónico</h3>
+          <p>
+            gerente@hglconstructores.com
+          </p>
+          <h3 class="color--brand-secondary weight--normal push-half--bottom">Direccion Sala de Ventas</h3>
+          <p>
+            Carrera 45 # 80 - 285 <br>
+            Oficina 205  <br>
+            Centro Comercial Sparta <br>
+            Barranquilla - Colombia
+          </p>
+        </div>
       </div>
     </section>
   </div>
@@ -330,12 +771,16 @@
 <div class="pane pane--medium" data-anchor="get">
   <div class="container">
     <div class="grid grid--middle">
-      <div class="grid__item one-half">
-        <span>Construye</span>
-        <img src="images/hgl-logo.jpg" alt="">
-      </div><div class="grid__item one-half">
-        <span>Financia</span>
-        <img src="images/schroeder-logo.svg" alt="">            
+      <div class="grid__item medium--one-half text--center">
+        <div class="soft-half--ends">
+          <span class="push-half--right">Construye</span>
+          <img src="images/hgl-logo.jpg" alt="">
+        </div>
+      </div><div class="grid__item medium--one-half text--center">
+        <div class="soft-half--ends">
+          <span class="push-half--right">Financia</span>
+          <img src="images/schroeder-logo.svg" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -345,21 +790,40 @@
   <div class="pane pane--large">
     <div class="container">
       <div class="grid grid--middle">
-        <div class="grid__item one-third text--center">
+        <div class="grid__item medium--one-third text--center">
           <img width="210" src="images/logo.svg" alt="">
-        </div><div class="grid__item two-thirds">
-          <h4>Enlaces</h4>
-          <a href="#inicio">Inicio</a>
-          <a href="#amenidades">Amenidades</a>
-          <a href="#apartamentos">Apartamentos</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#ubicacion">Ubicacion</a>
-          <a href="#contacto">Contacto</a>
+        </div><div class="grid__item medium--two-thirds">
+          <h4 class="color--brand-primary weight--normal text--small text--center medium--text-start">Enlaces</h4>
+          <div class="push--bottom text--smaller nav-block--medium">
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#inicio">Inicio</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#amenidades">Amenidades</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#apartamentos">Apartamentos</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#galeria">Galeria</a>
+            <a data-scroll class="uppercase text--separated nav-block__item" href="#ubicacion">Ubicacion</a>
+            <a data-scroll class="uppercase text--separated nav-block__item"  href="#contacto">Contacto</a>
+          </div>
 
-          <h4>Redes Sociales</h4>
-          <a href="#">/hglconstructor</a>
-          <a href="#"> @hglconstructor</a>
-          <a href="#"> @hglconstructores</a>
+          <h4 class="color--brand-primary weight--normal text--small text--center medium--text-start">Redes Sociales</h4>
+          <div class="push--bottom nav-block--medium">
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+              /hglconstructor
+            </a>
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+              @hglconstructor
+            </a>
+            <a class="nav-block__item text--separated uppercase text--smaller" href="#">
+              <svg class="icon icon-lg">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+              @hglconstructores
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -367,15 +831,87 @@
   <div class="pane background--brand-secondary">
     <div class="container text--smaller text--center">
       © <span id="copy-year">2017</span> GOLFTERRASSEN APARTAMENTOS - TODOS LOS DERECHOS RESERVADOS
-    </div>        
+    </div>
   </div>
 </footer>
 
-<!--<script src="js/bundle.js"></script>-->
+<script src="js/bundle.js"></script>
 <script src="js/ga.js"></script>
 <script>
   var d = new Date().getFullYear()
   document.querySelector('#copy-year').innerText = d
 </script>
+<div>
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <symbol id="icon-check" viewBox="0 0 32 32">
+  <title>check</title>
+  <path d="M16 31.111c-8.346 0-15.111-6.765-15.111-15.111s6.765-15.111 15.111-15.111c8.346 0 15.111 6.765 15.111 15.111s-6.765 15.111-15.111 15.111zM16 29.333c7.364 0 13.333-5.97 13.333-13.333s-5.97-13.333-13.333-13.333c-7.364 0-13.333 5.97-13.333 13.333s5.97 13.333 13.333 13.333z"></path>
+  <path d="M9.517 13.594l-1.257 1.257 5.962 5.962 9.517-9.517-1.257-1.257-8.26 8.26z"></path>
+  </symbol>
+  <symbol id="icon-more" viewBox="0 0 32 32">
+  <title>more</title>
+  <path d="M16.356 8.533h-0.356v7.289h-7.289v0.356h7.289v7.289h0.356v-7.289h7.289v-0.356h-7.289z"></path>
+  <path d="M16 0.178c-8.739 0-15.822 7.084-15.822 15.822s7.084 15.822 15.822 15.822c8.738 0 15.822-7.084 15.822-15.822s-7.084-15.822-15.822-15.822zM16 31.467c-8.542 0-15.467-6.925-15.467-15.467s6.925-15.467 15.467-15.467c8.542 0 15.467 6.925 15.467 15.467s-6.925 15.467-15.467 15.467z"></path>
+  </symbol>
+  <symbol id="icon-down" viewBox="0 0 32 32">
+  <title>down</title>
+  <path d="M0.97 0.97v30.061h30.061v-30.061h-30.061zM0 0h32v32h-32v-32z"></path>
+  <path d="M15.523 22.556v-16.738h0.964v16.738l5.144-5.144 0.682 0.682-6.148 6.148-0.16-0.16-0.16 0.16-6.148-6.148 0.682-0.682z"></path>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="0 0 32 32">
+  <title>facebook</title>
+  <path d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16zM20.022 16.626l0.378-3.672h-3.233v-2.163c0-0.811 0.536-1.002 0.918-1.002h2.325v-3.568l-3.204-0.013c-3.556 0-4.364 2.664-4.364 4.365v2.379h-2.057v3.676h2.057v10.459h4.326v-10.459h2.855z"></path>
+  </symbol>
+  <symbol id="icon-green" viewBox="0 0 32 32">
+  <title>green</title>
+  <path d="M31.467 28.004h-7.467v-8.017c4.464-0.275 8-3.983 8-8.516 0-4.713-3.821-8.533-8.533-8.533s-8.533 3.821-8.533 8.533c0 4.534 3.536 8.241 8 8.516v8.017h-4.8v-1.6h1.067c0.295 0 0.533-0.239 0.533-0.533v-1.314c0-0.945-0.694-1.727-1.6-1.864v-1.088c0-0.295-0.239-0.533-0.533-0.533s-0.533 0.239-0.533 0.533v1.067h-2.133v-1.067c0-0.295-0.239-0.533-0.533-0.533s-0.533 0.239-0.533 0.533v1.088c-0.906 0.138-1.6 0.92-1.6 1.864v1.314c0 0.295 0.239 0.533 0.533 0.533h1.067v1.6h-6.4v-4.82c3.58-0.272 6.4-3.264 6.4-6.913 0-3.829-3.104-6.933-6.933-6.933s-6.933 3.104-6.933 6.933c0 3.649 2.82 6.641 6.4 6.913v4.82h-5.867c-0.295 0-0.533 0.239-0.533 0.533s0.239 0.533 0.533 0.533h30.933c0.295 0 0.533-0.239 0.533-0.533s-0.239-0.533-0.533-0.533zM16 11.471c0-4.124 3.343-7.467 7.467-7.467s7.467 3.343 7.467 7.467c0 3.944-3.059 7.174-6.933 7.447v-4.027l1.444-1.444c0.208-0.208 0.208-0.546 0-0.754s-0.546-0.208-0.754 0l-1.223 1.223-1.223-1.223c-0.208-0.208-0.546-0.208-0.754 0s-0.208 0.546 0 0.754l1.444 1.444v4.027c-3.875-0.274-6.933-3.503-6.933-7.447zM1.067 16.271c0-3.24 2.627-5.867 5.867-5.867s5.867 2.627 5.867 5.867c0 3.060-2.343 5.573-5.333 5.842v-3.488l1.444-1.444c0.208-0.208 0.208-0.546 0-0.754s-0.546-0.208-0.754 0l-1.223 1.223-1.223-1.223c-0.208-0.208-0.546-0.208-0.754 0s-0.208 0.546 0 0.754l1.444 1.444v3.488c-2.99-0.27-5.333-2.782-5.333-5.842zM13.333 24.557c0-0.453 0.367-0.819 0.819-0.819h3.695c0.453 0 0.819 0.367 0.819 0.819v0.781h-5.333v-0.781zM14.933 26.404h2.133v1.6h-2.133v-1.6z"></path>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 32 32">
+  <title>instagram</title>
+  <path d="M20.769 8.451h-9.537c-1.522 0-2.761 1.239-2.761 2.761v9.537c0 1.522 1.239 2.761 2.761 2.761h9.537c1.522 0 2.761-1.239 2.761-2.761v-9.537c0-1.522-1.239-2.761-2.761-2.761zM16 20.938c-2.733 0-4.957-2.224-4.957-4.958s2.224-4.957 4.957-4.957c2.734 0 4.958 2.224 4.958 4.957s-2.224 4.958-4.958 4.958zM16-0.063c8.836 0 16 7.164 16 16s-7.164 16-16 16c-8.836 0-16-7.164-16-16s7.164-16 16-16zM21.117 12.048c-0.647 0-1.173-0.526-1.173-1.173s0.526-1.173 1.173-1.173c0.647 0 1.173 0.526 1.173 1.173s-0.526 1.173-1.173 1.173zM16 13.118c1.578 0 2.862 1.285 2.862 2.862 0 1.579-1.284 2.863-2.862 2.863s-2.863-1.285-2.863-2.863c0-1.578 1.285-2.862 2.863-2.862zM25.624 20.749v-9.537c0-2.677-2.178-4.856-4.856-4.856h-9.537c-2.677 0-4.856 2.178-4.856 4.856v9.537c0 2.678 2.178 4.856 4.856 4.856h9.537c2.678 0 4.856-2.178 4.856-4.856z"></path>
+  </symbol>
+  <symbol id="icon-level" viewBox="0 0 32 32">
+  <title>level</title>
+  <path d="M29.337 32h-26.675c-1.468 0-2.663-1.194-2.663-2.662v-26.675c0-1.468 1.194-2.662 2.663-2.662h26.675c1.468 0 2.663 1.194 2.663 2.662v26.675c-0 1.468-1.195 2.663-2.663 2.663zM2.663 0.951c-0.944 0-1.712 0.768-1.712 1.711v26.675c0 0.944 0.768 1.712 1.712 1.712h26.675c0.944 0 1.712-0.768 1.712-1.712v-26.675c0-0.944-0.768-1.711-1.712-1.711h-26.675zM27.209 28.458h-22.419c-0.689 0-1.248-0.56-1.248-1.249v-22.419c0-0.689 0.56-1.248 1.248-1.248h22.419c0.689 0 1.249 0.56 1.249 1.248v22.419c0 0.689-0.56 1.249-1.249 1.249zM16.476 27.507h10.734c0.164 0 0.298-0.134 0.298-0.298v-22.419c0-0.164-0.134-0.297-0.298-0.297h-10.734v1.901h2.074c1.023 0 1.856 0.833 1.856 1.856v0.028c0 1.024-0.833 1.856-1.856 1.856h-2.074v17.372zM4.791 4.493c-0.164 0-0.297 0.134-0.297 0.297v22.419c0 0.164 0.134 0.298 0.297 0.298h10.734v-17.372h-2.074c-1.024 0-1.856-0.833-1.856-1.856v-0.028c0-1.024 0.833-1.856 1.856-1.856h2.074v-1.901h-10.734zM13.45 7.345c-0.499 0-0.905 0.406-0.905 0.905v0.028c0 0.499 0.406 0.905 0.905 0.905h5.1c0.499 0 0.905-0.406 0.905-0.905v-0.028c0-0.499-0.406-0.905-0.905-0.905h-5.1z"></path>
+  </symbol>
+  <symbol id="icon-more2" viewBox="0 0 32 32">
+  <title>more2</title>
+  <path d="M16 8.364h0.364v15.273h-0.364z"></path>
+  <path d="M23.818 15.818v0.364h-15.273v-0.364z"></path>
+  </symbol>
+  <symbol id="icon-pool" viewBox="0 0 32 32">
+  <title>pool</title>
+  <path d="M31.448 22.664c-1.112 0-1.693 0.332-2.205 0.624-0.45 0.257-0.838 0.479-1.658 0.479s-1.208-0.222-1.658-0.479c-0.512-0.293-1.093-0.624-2.205-0.624s-1.693 0.332-2.205 0.624c-0.45 0.257-0.838 0.479-1.657 0.479s-1.208-0.222-1.657-0.479c-0.512-0.293-1.093-0.624-2.205-0.624s-1.693 0.332-2.205 0.624c-0.45 0.257-0.838 0.479-1.657 0.479s-1.207-0.222-1.657-0.479c-0.512-0.293-1.093-0.624-2.205-0.624-0.208 0-0.398 0.012-0.572 0.033v-2.777h4.979v1.683c0 0.305 0.247 0.552 0.552 0.552s0.552-0.247 0.552-0.552v-12.717c0-1.928 0.992-3.628 2.493-4.619 1.56 1.029 2.486 2.742 2.486 4.619 0 0.305 0.247 0.552 0.552 0.552s0.552-0.247 0.552-0.552c0-2.045-0.917-3.928-2.488-5.18 0.603-0.226 1.255-0.351 1.936-0.351 3.050 0 5.531 2.481 5.531 5.531 0 0.305 0.247 0.552 0.552 0.552s0.552-0.247 0.552-0.552c0-3.658-2.976-6.634-6.634-6.634s-6.634 2.976-6.634 6.634v1.062h-4.979v-1.062c0-3.050 2.481-5.531 5.531-5.531 0.127 0 0.256 0.004 0.383 0.013 0.305 0.021 0.567-0.209 0.588-0.513s-0.209-0.567-0.513-0.588c-0.152-0.010-0.306-0.016-0.458-0.016-3.658 0-6.634 2.976-6.634 6.634v14.123c-0.193 0.090-0.365 0.187-0.529 0.281-0.45 0.257-0.838 0.479-1.657 0.479s-1.207-0.222-1.657-0.479c-0.512-0.293-1.093-0.624-2.205-0.624-0.305 0-0.552 0.247-0.552 0.552s0.247 0.552 0.552 0.552c0.819 0 1.207 0.222 1.657 0.479 0.512 0.293 1.093 0.624 2.205 0.624s1.693-0.332 2.205-0.624c0.45-0.257 0.838-0.479 1.657-0.479s1.207 0.222 1.657 0.479c0.512 0.293 1.093 0.624 2.205 0.624s1.693-0.332 2.205-0.624c0.45-0.257 0.838-0.479 1.657-0.479s1.208 0.222 1.657 0.479c0.512 0.293 1.093 0.624 2.205 0.624s1.693-0.332 2.205-0.624c0.45-0.257 0.838-0.479 1.657-0.479s1.208 0.222 1.658 0.479c0.512 0.293 1.093 0.624 2.205 0.624s1.693-0.332 2.205-0.624c0.45-0.257 0.838-0.479 1.658-0.479 0.305 0 0.552-0.247 0.552-0.552s-0.247-0.552-0.552-0.552zM7.703 18.816v-3.331h4.979v3.331h-4.979zM12.683 11.050v3.331h-4.979v-3.331h4.979zM27.586 25.974c0.305 0 0.552 0.247 0.552 0.552s-0.247 0.552-0.552 0.552c-1.112 0-1.693-0.332-2.205-0.624-0.45-0.257-0.838-0.479-1.658-0.479s-1.207 0.222-1.657 0.479c-0.512 0.293-1.093 0.624-2.205 0.624s-1.693-0.332-2.205-0.624c-0.45-0.257-0.838-0.479-1.657-0.479s-1.207 0.222-1.657 0.479c-0.512 0.293-1.093 0.624-2.205 0.624s-1.692-0.332-2.205-0.624c-0.45-0.257-0.838-0.479-1.657-0.479s-1.207 0.222-1.657 0.479c-0.512 0.293-1.093 0.624-2.205 0.624-0.305 0-0.552-0.247-0.552-0.552s0.247-0.552 0.552-0.552c0.819 0 1.207-0.222 1.657-0.479 0.512-0.293 1.093-0.624 2.205-0.624s1.693 0.332 2.205 0.624c0.45 0.257 0.838 0.479 1.657 0.479s1.207-0.222 1.657-0.479c0.512-0.293 1.093-0.624 2.205-0.624s1.693 0.332 2.205 0.624c0.45 0.257 0.838 0.479 1.657 0.479s1.207-0.222 1.657-0.479c0.512-0.293 1.093-0.624 2.205-0.624s1.693 0.332 2.205 0.624c0.45 0.257 0.838 0.479 1.658 0.479zM23.723 27.078c0.305 0 0.552 0.247 0.552 0.552s-0.247 0.552-0.552 0.552c-0.819 0-1.207 0.222-1.657 0.479-0.512 0.293-1.093 0.624-2.205 0.624s-1.693-0.332-2.205-0.624c-0.45-0.257-0.838-0.479-1.657-0.479s-1.207 0.222-1.657 0.479c-0.512 0.293-1.093 0.624-2.205 0.624s-1.692-0.332-2.205-0.624c-0.45-0.257-0.838-0.479-1.657-0.479-0.305 0-0.552-0.247-0.552-0.552s0.247-0.552 0.552-0.552c1.112 0 1.693 0.332 2.205 0.624 0.45 0.257 0.838 0.479 1.657 0.479s1.207-0.222 1.657-0.479c0.512-0.293 1.093-0.624 2.205-0.624s1.693 0.332 2.205 0.624c0.45 0.257 0.838 0.479 1.657 0.479s1.207-0.222 1.657-0.479c0.512-0.293 1.093-0.624 2.205-0.624z"></path>
+  </symbol>
+  <symbol id="icon-quality" viewBox="0 0 32 32">
+  <title>quality</title>
+  <path d="M29.429 27.612l-3.788-8.91c1.339-1.927 2.125-4.265 2.125-6.784 0-6.572-5.346-11.918-11.918-11.918s-11.918 5.347-11.918 11.918c0 2.519 0.786 4.857 2.125 6.784l-3.788 8.91c-0.181 0.426-0.15 0.836 0.086 1.123s0.632 0.397 1.085 0.302l2.893-0.608c0.342-0.072 0.822 0.132 1.008 0.428l1.569 2.505c0.231 0.368 0.556 0.575 0.902 0.575 0.023 0 0.046-0.001 0.069-0.003 0.371-0.029 0.687-0.291 0.869-0.717l3.203-7.533c0.618 0.099 1.252 0.152 1.897 0.152s1.279-0.052 1.897-0.152l3.203 7.533c0.181 0.426 0.498 0.688 0.869 0.717 0.023 0.002 0.046 0.003 0.069 0.003 0.345 0 0.671-0.206 0.902-0.575l1.569-2.505c0.186-0.296 0.666-0.501 1.008-0.429l2.893 0.608c0.454 0.095 0.849-0.015 1.085-0.302s0.268-0.697 0.086-1.123zM5.131 27.645l-1.901 0.4c-0.017 0.004-0.032 0.006-0.045 0.008 0.005-0.013 0.010-0.027 0.017-0.043l3.564-8.384c0.382 0.449 0.796 0.87 1.24 1.259l-2.874 6.76zM6.335 27.407l2.493-5.864c0.496 0.363 1.021 0.689 1.572 0.973l-2.371 5.577c-0.411-0.46-1.082-0.733-1.694-0.685zM9.814 30.821c-0.007 0.016-0.013 0.030-0.019 0.042-0.008-0.011-0.017-0.024-0.026-0.038l-1.071-1.71 2.624-6.171c0.521 0.215 1.060 0.394 1.615 0.534l-3.122 7.344zM15.848 22.822c-6.012 0-10.903-4.891-10.903-10.903s4.891-10.903 10.903-10.903c6.012 0 10.903 4.891 10.903 10.903s-4.891 10.903-10.903 10.903zM21.927 30.824c-0.009 0.015-0.018 0.027-0.026 0.038-0.006-0.012-0.013-0.026-0.019-0.042l-3.122-7.345c0.555-0.14 1.094-0.319 1.615-0.534l2.624 6.171-1.071 1.711zM23.668 28.093l-2.371-5.577c0.55-0.284 1.075-0.61 1.572-0.973l2.493 5.864c-0.612-0.048-1.283 0.225-1.694 0.685zM28.467 28.044l-1.901-0.4-2.874-6.76c0.444-0.389 0.858-0.809 1.24-1.259l3.564 8.384c0.007 0.016 0.012 0.030 0.017 0.043-0.013-0.002-0.029-0.004-0.045-0.008z"></path>
+  <path d="M15.848 5.495c-3.542 0-6.423 2.881-6.423 6.423s2.881 6.423 6.423 6.423c3.542 0 6.423-2.881 6.423-6.423s-2.881-6.423-6.423-6.423zM15.848 17.326c-2.982 0-5.408-2.426-5.408-5.408s2.426-5.408 5.408-5.408 5.408 2.426 5.408 5.408c0 2.982-2.426 5.408-5.408 5.408z"></path>
+  <path d="M15.848 2.861c-4.994 0-9.057 4.063-9.057 9.057s4.063 9.057 9.057 9.057 9.057-4.063 9.057-9.057c0-4.994-4.063-9.057-9.057-9.057zM15.848 19.96c-4.434 0-8.042-3.608-8.042-8.042s3.608-8.042 8.042-8.042 8.042 3.608 8.042 8.042c0 4.434-3.608 8.042-8.042 8.042z"></path>
+  </symbol>
+  <symbol id="icon-shower" viewBox="0 0 32 32">
+  <title>shower</title>
+  <path d="M28.662 32c-0.204 0-0.386-0.144-0.427-0.351l-3.14-15.857c-0.047-0.236 0.107-0.466 0.343-0.512s0.466 0.107 0.512 0.343l3.14 15.857c0.047 0.236-0.107 0.466-0.343 0.512-0.028 0.006-0.057 0.008-0.085 0.008zM10.403 32c-0.028 0-0.057-0.003-0.085-0.008-0.236-0.047-0.39-0.276-0.343-0.512l3.14-15.857c0.047-0.236 0.277-0.389 0.512-0.343s0.39 0.276 0.343 0.512l-3.14 15.857c-0.041 0.208-0.223 0.351-0.427 0.351zM23.865 32c-0.227 0-0.419-0.176-0.435-0.406l-1.105-15.857c-0.017-0.24 0.164-0.449 0.405-0.465 0.241-0.017 0.449 0.164 0.465 0.405l1.105 15.857c0.017 0.24-0.164 0.449-0.405 0.465-0.010 0.001-0.021 0.001-0.031 0.001zM15.201 32c-0.010 0-0.020-0-0.031-0.001-0.24-0.017-0.421-0.225-0.405-0.465l1.105-15.857c0.017-0.24 0.225-0.422 0.465-0.405s0.421 0.225 0.405 0.465l-1.105 15.857c-0.016 0.23-0.208 0.406-0.435 0.406zM19.533 32c-0.241 0-0.436-0.195-0.436-0.436v-15.857c0-0.241 0.195-0.436 0.436-0.436s0.436 0.195 0.436 0.436v15.857c0 0.241-0.195 0.436-0.436 0.436zM3.318 32c-0.241 0-0.436-0.195-0.436-0.436v-22.3c-0.016-0.308-0.166-4.283 2.351-6.949 1.45-1.536 3.485-2.315 6.047-2.315 2.921 0 5.179 0.796 6.71 2.366 1.663 1.705 1.962 3.81 2.013 4.633 3.515 0.22 6.306 3.15 6.306 6.719 0 0.241-0.195 0.436-0.436 0.436h-12.593c-0.241 0-0.436-0.195-0.436-0.436 0-3.561 2.779-6.485 6.282-6.718-0.058-0.737-0.345-2.579-1.77-4.034-1.361-1.39-3.406-2.094-6.078-2.094-2.31 0-4.13 0.685-5.409 2.037-2.306 2.438-2.12 6.279-2.118 6.318 0 0.008 0.001 0.017 0.001 0.025v22.312c0 0.241-0.195 0.436-0.436 0.436zM13.733 13.282h11.689c-0.224-3.028-2.76-5.424-5.844-5.424s-5.621 2.396-5.844 5.424z"></path>
+  </symbol>
+  <symbol id="icon-sun" viewBox="0 0 32 32">
+  <title>sun</title>
+  <path d="M15.994 6.189c-5.41 0-9.812 4.401-9.812 9.811s4.402 9.811 9.812 9.811c5.41 0 9.812-4.401 9.812-9.811s-4.402-9.811-9.812-9.811zM15.994 24.756c-4.828 0-8.757-3.928-8.757-8.756s3.928-8.756 8.757-8.756c4.828 0 8.757 3.928 8.757 8.756s-3.928 8.756-8.757 8.756zM15.994 26.866c0.291 0 0.528 0.236 0.528 0.527v4.079c0 0.291-0.236 0.527-0.528 0.527s-0.528-0.236-0.528-0.527v-4.079c0-0.291 0.236-0.527 0.528-0.527zM23.118 24.907l2.398 3.3c0.171 0.236 0.119 0.566-0.117 0.737-0.094 0.068-0.202 0.101-0.31 0.101-0.163 0-0.324-0.075-0.427-0.218l-2.398-3.3c-0.171-0.236-0.119-0.566 0.117-0.737s0.566-0.119 0.737 0.117zM30.874 20.28c0.277 0.090 0.429 0.388 0.339 0.665-0.072 0.223-0.279 0.365-0.502 0.365-0.054 0-0.109-0.008-0.163-0.026l-3.88-1.261c-0.277-0.090-0.429-0.388-0.339-0.665s0.388-0.429 0.665-0.339l3.88 1.261zM26.831 13.007c-0.222 0-0.429-0.142-0.502-0.365-0.090-0.277 0.062-0.575 0.339-0.665l3.88-1.261c0.277-0.090 0.575 0.062 0.665 0.339s-0.062 0.575-0.339 0.665l-3.88 1.261c-0.054 0.018-0.109 0.026-0.163 0.026zM22.382 7.209c-0.236-0.171-0.288-0.501-0.117-0.737l2.398-3.3c0.171-0.236 0.501-0.288 0.737-0.117s0.288 0.501 0.117 0.737l-2.398 3.3c-0.103 0.142-0.264 0.218-0.427 0.218-0.107 0-0.216-0.033-0.31-0.101zM15.994 5.134c-0.291 0-0.528-0.236-0.528-0.527v-4.079c0-0.291 0.236-0.527 0.528-0.527s0.528 0.236 0.528 0.527v4.079c0 0.291-0.236 0.527-0.528 0.527zM8.87 7.093l-2.398-3.3c-0.171-0.236-0.119-0.566 0.117-0.737s0.566-0.119 0.737 0.117l2.398 3.3c0.171 0.236 0.119 0.566-0.117 0.737-0.094 0.068-0.202 0.101-0.31 0.101-0.163 0-0.324-0.075-0.427-0.218zM5.32 11.978c0.277 0.090 0.429 0.388 0.339 0.665-0.072 0.223-0.279 0.365-0.502 0.365-0.054 0-0.109-0.008-0.163-0.026l-3.88-1.261c-0.277-0.090-0.429-0.388-0.339-0.665s0.388-0.428 0.665-0.339l3.88 1.261zM4.994 19.019c0.277-0.090 0.575 0.062 0.665 0.339s-0.062 0.575-0.339 0.665l-3.88 1.261c-0.054 0.018-0.109 0.026-0.163 0.026-0.222 0-0.429-0.142-0.502-0.365-0.090-0.277 0.062-0.575 0.339-0.665l3.88-1.261zM9.607 24.791c0.236 0.171 0.288 0.501 0.117 0.737l-2.398 3.3c-0.103 0.142-0.264 0.218-0.427 0.218-0.107 0-0.216-0.033-0.31-0.101-0.236-0.171-0.288-0.501-0.117-0.737l2.398-3.3c0.171-0.236 0.501-0.288 0.737-0.117z"></path>
+  </symbol>
+  <symbol id="icon-twitter" viewBox="0 0 32 32">
+  <title>twitter</title>
+  <path d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16zM25.801 11.499c-0.686 0.304-1.423 0.51-2.197 0.602 0.79-0.473 1.396-1.222 1.682-2.115-0.739 0.438-1.558 0.756-2.429 0.928-0.698-0.743-1.692-1.207-2.792-1.207-2.112 0-3.824 1.713-3.824 3.824 0 0.3 0.034 0.592 0.1 0.872-3.178-0.159-5.997-1.682-7.883-3.996-0.329 0.565-0.518 1.222-0.518 1.923 0 1.327 0.676 2.498 1.701 3.183-0.627-0.020-1.217-0.192-1.732-0.479-0 0.016-0 0.033-0 0.049 0 1.853 1.319 3.399 3.068 3.75-0.321 0.088-0.659 0.134-1.007 0.134-0.247 0-0.486-0.024-0.72-0.068 0.487 1.519 1.899 2.625 3.573 2.656-1.309 1.026-2.958 1.637-4.75 1.637-0.308 0-0.613-0.018-0.912-0.054 1.692 1.086 3.702 1.718 5.862 1.718 7.035 0 10.882-5.828 10.882-10.882 0-0.166-0.004-0.331-0.011-0.495 0.748-0.539 1.396-1.212 1.909-1.979z"></path>
+  </symbol>
+  <symbol id="icon-umbrella" viewBox="0 0 32 32">
+  <title>umbrella</title>
+  <path d="M32 20.605v-5.671h-0.679c-2.082 0-3.975 0.811-5.381 2.133h-9.406v-8.533h13.555c0.902 0 1.181-1.22 0.369-1.613l-14.226-6.867c-0.146-0.071-0.317-0.071-0.464 0l-14.226 6.867c-0.812 0.393-0.533 1.613 0.369 1.613h13.555v8.533h-9.406c-1.406-1.323-3.298-2.133-5.381-2.133h-0.679v5.671c0 1.466 1.102 2.673 2.522 2.841l-1.973 7.891c-0.071 0.286 0.102 0.575 0.388 0.647s0.575-0.102 0.647-0.388l1.91-7.64 2.397 7.67c0.088 0.281 0.387 0.438 0.668 0.35s0.438-0.387 0.35-0.668l-2.45-7.841h4.075v-0.679c0-0.882-0.145-1.729-0.413-2.521h4.68v2.133h1.6v4.267c0 2.357-1.91 4.267-4.267 4.267h-1.067c-0.295 0-0.533 0.239-0.533 0.533s0.239 0.533 0.533 0.533h13.867c0.295 0 0.533-0.239 0.533-0.533s-0.239-0.533-0.533-0.533h-1.067c-2.357 0-4.267-1.91-4.267-4.267v-4.267h1.6v-2.133h4.68c-0.268 0.791-0.413 1.639-0.413 2.521v0.679h3.584l-1.968 7.871c-0.071 0.286 0.102 0.575 0.388 0.647s0.575-0.102 0.647-0.388l1.91-7.64 2.397 7.67c0.088 0.281 0.387 0.438 0.668 0.35s0.438-0.387 0.35-0.668l-2.45-7.841h0.146c1.581 0 2.862-1.281 2.862-2.862zM16 1.126l13.135 6.341h-26.271l13.136-6.341zM3.736 22.4h-0.874c-0.992 0-1.795-0.804-1.795-1.795v-4.594c1.688 0.095 3.21 0.807 4.347 1.913l0.054 0.054c0.567 0.564 1.032 1.235 1.374 1.978l0.133 0.288c0.272 0.672 0.439 1.397 0.482 2.155h-3.72zM18.133 21.333h-1.6v5.333c0 1.745 0.838 3.294 2.133 4.267h-5.332c1.295-0.973 2.133-2.522 2.133-4.267v-5.333h-1.6v-1.067h4.267v1.067zM19.2 19.2h-11.532c-0.192-0.374-0.414-0.73-0.662-1.067h17.988c-0.248 0.336-0.47 0.693-0.662 1.067h-5.132zM25.026 20.244l0.133-0.288c0.342-0.744 0.807-1.414 1.374-1.978l0.054-0.054c1.136-1.106 2.659-1.818 4.347-1.913v4.594c0 0.992-0.804 1.795-1.795 1.795h-4.594c0.043-0.759 0.21-1.484 0.482-2.155z"></path>
+  </symbol>
+  <symbol id="icon-window" viewBox="0 0 32 32">
+  <title>window</title>
+  <path d="M29.541 32h-27.113c-0.271 0-0.49-0.219-0.49-0.49v-2.13c0-0.271 0.219-0.49 0.49-0.49h1.899v-28.4c0-0.271 0.219-0.49 0.49-0.49h22.335c0.271 0 0.49 0.219 0.49 0.49v28.4h1.899c0.271 0 0.49 0.219 0.49 0.49v2.13c0 0.27-0.219 0.49-0.49 0.49zM2.917 31.020h26.134v-1.151h-26.134v1.151zM5.306 28.89h21.355v-27.911h-21.355v27.911zM25.192 27.886h-8.229c-0.271 0-0.49-0.219-0.49-0.49v-25.078c0-0.271 0.219-0.49 0.49-0.49h8.228c0.271 0 0.49 0.219 0.49 0.49v25.078c0 0.271-0.219 0.49-0.49 0.49zM17.453 26.906h7.249v-3c-0.493-0.589-2.242-2.9-3.659-7.534-1.42-4.649-2.081-11.699-2.237-13.563h-1.353v24.098zM19.791 2.808c0.168 1.946 0.836 8.846 2.19 13.277 0.925 3.027 1.996 5.019 2.722 6.147v-19.424h-1.596c0.087 1.093 0.33 3.662 0.79 5.287 0.074 0.26-0.078 0.531-0.338 0.605s-0.531-0.078-0.605-0.338c-0.5-1.768-0.747-4.477-0.831-5.554h-0.531c0.127 1.39 0.499 5.195 0.986 7.575 0.054 0.265-0.117 0.524-0.382 0.578s-0.524-0.117-0.578-0.382c-0.514-2.514-0.892-6.443-1.011-7.771h-0.817zM15.004 27.886h-8.229c-0.271 0-0.49-0.219-0.49-0.49v-25.078c0-0.271 0.219-0.49 0.49-0.49h8.229c0.271 0 0.49 0.219 0.49 0.49v25.078c0 0.271-0.219 0.49-0.49 0.49zM7.265 26.906h7.249v-24.098h-1.353c-0.156 1.864-0.817 8.915-2.237 13.563-1.416 4.634-3.165 6.945-3.659 7.534v3zM7.265 2.808v19.419c0.728-1.133 1.801-3.129 2.722-6.142 1.354-4.432 2.022-11.332 2.19-13.277h-1.011c-0.119 1.329-0.496 5.258-1.011 7.772-0.054 0.265-0.314 0.435-0.578 0.382-0.265-0.054-0.436-0.313-0.382-0.578 0.487-2.381 0.86-6.185 0.986-7.575h-0.532c-0.083 1.077-0.331 3.786-0.831 5.554-0.073 0.26-0.344 0.412-0.604 0.338s-0.412-0.344-0.338-0.605c0.46-1.626 0.703-4.194 0.79-5.287h-1.402z"></path>
+  </symbol>
+  </defs>
+</svg>
+</div>
 </body>
 </html>
