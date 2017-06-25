@@ -1,6 +1,7 @@
 "use strict";
 import "../css/style.scss";
 import $ from "jquery";
+import "./parallax";
 import smartPhone from "detect-mobile-browser";
 import magnificPopup from "magnific-popup";
 import Flickity from "flickity";
@@ -9,12 +10,9 @@ import tabby from "Tabby";
 import smoothScroll from "smooth-scroll";
 import gumshoe from "gumshoe";
 import MapFactory from './map';
-
 const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
-const rellax = new Rellax(".rellax", {
-  center: true
-});
+$('.parallax').parallax();
 
 tabby.init();
 smoothScroll.init({
@@ -96,7 +94,6 @@ function startMobileMenu(menu) {
 const handleMobileDetection = () => {
   if (!SmartPhone.isAny()) {
     startMobileMenu(mainMenu);
-    startMobileMenu(document.querySelector(".js-tab-menu"));
     $(".js-menu-link").on("dragstart", e => e.preventDefault());
   }
   if (SmartPhone.isAny()) {

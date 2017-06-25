@@ -5,26 +5,33 @@
   color: white;
   padding: $base-spacing-unit * 4 0 $base-spacing-unit * 4;
   @media #{$small} {
-    padding: $base-spacing-unit * 6 0 $base-spacing-unit;
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit * 6;
   }
 }
 
 .hero--main{
-  // background-image: url('../images/imagen-sala.jpg');
+  background-image: url('../images/imagen-sala.jpg');
   background-position: center;
   background-size: cover;
-  color: white;
-  @media #{$small-max} {
+  padding-top: 117px;
+  @media #{$small} {
+    background-attachment: fixed;
     height: auto;
-    padding-top: 117px;
   }
 }
 
 .hero--green {
-  background-image: linear-gradient(to right, #87C98A, transparent), url(../images/ecologico.jpg);
+  background-image: linear-gradient(to right, #87C98A, transparent);
   background-position: center;
   background-size: cover;
   color: white;
+}
+
+.hero--parallax {
+  height: auto;
+  @media #{$small} {
+    height: 540px;
+  }
 }
 
 .hero--full {
@@ -34,30 +41,5 @@
   }
   @media screen and (max-height: 480px) {
     height: 500px;
-  }
-}
-
-.parallax__container {
-  position: relative;
-  overflow: hidden;
-}
-
-.parallax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-position: center;
-  background-size: cover;
-  &__image {
-    max-width: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(-50%);
   }
 }

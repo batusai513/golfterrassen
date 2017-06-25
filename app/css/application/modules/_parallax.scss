@@ -1,0 +1,21 @@
+.parallax {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  &__image {
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%);
+  }
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+}

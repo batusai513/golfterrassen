@@ -31,6 +31,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.html$/, loader: "html-loader" },
       {
        test: /\.(js)$/,
        use: [
@@ -78,6 +79,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({
       filename: 'css/[name].[contenthash].css'
@@ -116,10 +121,10 @@ module.exports = {
       }
     }),
     new CopyWebpackPlugin([
-        {
-            from: './static',
-            to: './images/'
-        }
+      {
+          from: './static',
+          to: './images/'
+      }
     ]),
     new webpack.optimize.UglifyJsPlugin(),
     new CompressionPlugin({

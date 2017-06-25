@@ -3,6 +3,7 @@ const buildPath = path.resolve('./dist/');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: path.resolve('./app'),
@@ -23,6 +24,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.html$/, loader: "html-loader" },
       {
        test: /\.(js)$/,
        use: [
@@ -72,6 +74,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     // Create HTML file that includes references to bundled CSS and JS.
     new HtmlWebpackPlugin({
@@ -83,6 +89,12 @@ module.exports = {
       },
       inject: true
     }),
+    new CopyWebpackPlugin([
+      {
+          from: './static',
+          to: './images/'
+      }
+    ]),
     new webpack.LoaderOptionsPlugin({
       minimize: false,
       debug: true,

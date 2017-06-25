@@ -13,9 +13,15 @@
     border: 1px solid transparent;
     display: block;
     text-align: center;
+    border-color: $brand-primary;
+    border-radius: 20px;
+    &:hover {
+      background-color: rgba($brand-primary, 0.4);
+      color: $brand-secondary;
+    }
     &.active {
-      border-color: $brand-primary;
-      border-radius: 20px;
+      background-color: $brand-primary;
+      color: $brand-secondary;
     }
   }
 }
