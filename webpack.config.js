@@ -1,34 +1,100 @@
 const path = require('path');
-const buildPath = path.resolve(__dirname);
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const buildPath = path.resolve('./dist/');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  context: path.resolve('./app'),
+  target: 'web',
+  devtool: 'eval-source-map',
+  resolve: {
+    modules: [path.resolve('./app'), 'node_modules'],
+    extensions: ['*', '.js', '.jsx', '.json', '.scss']
+  },
   entry: [
-    path.resolve(__dirname, 'js/index.js')
+    './js/index.js',
+    './js/ga.js'
   ],
   output: {
-    filename: 'js/bundle.js',
-    path: buildPath
+    filename: 'js/[name].bundle.js',
+    path: buildPath,
+    publicPath: '/'
   },
   module: {
     rules: [
       {
-        test: /\.css|.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'sass-loader']
-        })
-      }, {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|webm|mp4)$/,
-        loaders: ['file-loader?name=[name].[ext]&outputPath=/images/']
+       test: /\.(js)$/,
+       use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              presets: [['es2015', { modules: false }]]
+            }
+          }
+       ],
+       exclude: /(node_modules|bower_components)/,
       },
       {
-       test: /\.(js)$/,
-       use: 'babel-loader?presets[]=es2015',
-       exclude: /(node_modules|bower_components)/,
+        test: /(\.css|\.scss)$/,
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ]
+      },
+      {
+        test: /\.eot(\?v=\d+.\d+.\d+)?$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+.\d+.\d+)?$/,
+        loader: 'file-loader?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.svg(\?v=\d+.\d+.\d+)?$/,
+        loader: 'file-loader?limit=10000&mimetype=image/svg+xml'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loaders: ['file-loader']
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file-loader?name=[name].[ext]'
       },
     ]
   },
-  plugins: [new ExtractTextPlugin('css/style.css')],
+  plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
+    // Create HTML file that includes references to bundled CSS and JS.
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      chunksSortMode: 'none',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      inject: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: false,
+      debug: true,
+      noInfo: true, // set to false to see a list of every file being bundled.
+      options: {
+        sassLoader: {
+          includePaths: [path.resolve(__dirname, 'app', 'css'), 'node_modules']
+        },
+        context: '/'
+      }
+    })
+  ],
 
   // Configuration for dev server
   devServer: {

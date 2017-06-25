@@ -34,9 +34,9 @@
 // use this area as vendor overwrite area, use other files for actual vendor filesm it is an extra http request, but keep sanity high
 //@import "application/vendor/jquery-ui";
 
-@import '~normalize.css/normalize.css';
-@import '~flickity/dist/flickity.css';
-@import '~magnific-popup/src/css/main';
+@import 'normalize.css/normalize.css';
+@import 'flickity/dist/flickity.css'; // Postcss import handle this one https://github.com/postcss/postcss-import/issues/209
+@import '~magnific-popup/src/css/main'; // sass loader handler those ones
 @import '~Tabby/src/sass/tabby';
 
 //core styles

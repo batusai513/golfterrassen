@@ -1,16 +1,16 @@
 "use strict";
+import "../css/style.scss";
+import $ from "jquery";
+import smartPhone from "detect-mobile-browser";
+import magnificPopup from "magnific-popup";
+import Flickity from "flickity";
+import Rellax from "rellax";
+import tabby from "Tabby";
+import smoothScroll from "smooth-scroll";
+import gumshoe from "gumshoe";
+import MapFactory from './map';
 
-const styles = require("../css/style.scss");
-const $ = require("jquery");
-const SmartPhone = require("detect-mobile-browser")(false);
-const magnificPopup = require("magnific-popup");
-const Flickity = require("flickity");
-const Rellax = require("rellax");
-const tabby = require("Tabby");
-const smoothScroll = require("smooth-scroll");
-const gumshoe = require("gumshoe");
-const MapFactory = require('./map');
-
+const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
 const rellax = new Rellax(".rellax", {
   center: true
