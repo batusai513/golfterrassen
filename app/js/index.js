@@ -66,16 +66,24 @@ function startMobileMenu(menu) {
 
 
 
-var $carousel = null;
+var $carousel = $('.carousel-apartamentos').flickity({
+  imagesLoaded: true,
+  prevNextButtons: false
+});
 
 tabby.init({
   callback: function ( tabs, toggle ) {
     var el = tabs[0];
     var carousel = $(el).find('.carousel-apartamentos');
-    $carousel = $(carousel).flickity({
-      imagesLoaded: true,
-      prevNextButtons: false
-    });
+    var data = carousel.data('flickity');
+    if(data) {
+      data.resize();
+    } else {
+      $carousel = $(carousel).flickity({
+        imagesLoaded: true,
+        prevNextButtons: false
+      });
+    }
   }
 });
 
