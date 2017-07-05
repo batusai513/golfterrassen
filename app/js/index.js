@@ -4,17 +4,18 @@ import $ from "jquery";
 import "./parallax";
 import smartPhone from "detect-mobile-browser";
 import magnificPopup from "magnific-popup";
-import Flickity from "flickity";
 import Rellax from "rellax";
 import tabby from "Tabby";
 import smoothScroll from "smooth-scroll";
 import gumshoe from "gumshoe";
 import MapFactory from './map';
+const Flickity = require("flickity/dist/flickity.pkgd");
+var jQueryBridget = require('jquery-bridget');
+jQueryBridget( 'flickity', Flickity, $ );
 const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
 $('.parallax').parallax();
 
-tabby.init();
 smoothScroll.init({
   speed: 1000
 });
@@ -52,34 +53,6 @@ $(".js-gallery").magnificPopup({
   }
 });
 
-const demos = {
-  2: document.querySelector("#search-demo"),
-  3: document.querySelector("#radio-demo"),
-  4: document.querySelector("#collections-demo")
-};
-
-const swapVideos = (index, nextIndex) => {
-  const previousVideo = demos[index];
-  const nextVideo = demos[nextIndex];
-
-  if (previousVideo) {
-    previousVideo.pause();
-  }
-
-  if (nextVideo) {
-    nextVideo.play();
-  }
-};
-
-const renderHeroBackground = () => {
-  const url = "../images/bg1.jpg";
-  const img = new Image();
-  img.onload = function() {
-    $(".overlay").css({ "background-image": "url(" + url + ")", opacity: 1 });
-  };
-  img.src = url;
-};
-
 function startMobileMenu(menu) {
   return new Flickity(menu, {
     cellAlign: "left",
@@ -90,6 +63,21 @@ function startMobileMenu(menu) {
     percentPosition: false
   });
 }
+
+
+
+var $carousel = null;
+
+tabby.init({
+  callback: function ( tabs, toggle ) {
+    var el = tabs[0];
+    var carousel = $(el).find('.carousel-apartamentos');
+    $carousel = $(carousel).flickity({
+      imagesLoaded: true,
+      prevNextButtons: false
+    });
+  }
+});
 
 const handleMobileDetection = () => {
   if (!SmartPhone.isAny()) {
@@ -113,7 +101,10 @@ const handleMobileDetection = () => {
   }
 };
 
+window.addEventListener( 'load', function() {
+  $carousel.data('flickity').resize();
+});
+
 $(document).ready(() => {
-  renderHeroBackground();
   handleMobileDetection();
 });
