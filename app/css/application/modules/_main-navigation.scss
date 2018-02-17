@@ -1,5 +1,6 @@
 .main-navigation{
 	// @include horizontal-scrolling;
+	height: to-rem(37);
 	font-size: $font-size-smaller;
 	letter-spacing: 1.7px;
 	text-transform: uppercase;
@@ -50,5 +51,7 @@
 			background-color: rgba($gray-light, 0.12);
 		}
 	}
-	&--index{}
+	.flickity-slider {
+		white-space: nowrap;
+	}
 }

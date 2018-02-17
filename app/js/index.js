@@ -6,7 +6,7 @@ import smartPhone from "detect-mobile-browser";
 import magnificPopup from "magnific-popup";
 import Rellax from "rellax";
 import tabby from "Tabby";
-import smoothScroll from "smooth-scroll";
+import SmoothScroll from "smooth-scroll";
 import gumshoe from "gumshoe";
 import MapFactory from './map';
 const Flickity = require("flickity/dist/flickity.pkgd");
@@ -16,12 +16,15 @@ const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
 $('.parallax').parallax();
 
-smoothScroll.init({
+
+new SmoothScroll('.js-menu-link', {
   speed: 1000
 });
+
 gumshoe.init({
   scrollDelay: true
 });
+
 var map = MapFactory('#map-canvas');
 
 $(".js-gallery").magnificPopup({
@@ -60,7 +63,8 @@ function startMobileMenu(menu) {
     prevNextButtons: false,
     pageDots: false,
     contain: true,
-    percentPosition: false
+    percentPosition: false,
+    setGallerySize: false
   });
 }
 
@@ -78,6 +82,7 @@ tabby.init({
     var data = carousel.data('flickity');
     if(data) {
       data.resize();
+      data.reposition();
     } else {
       $carousel = $(carousel).flickity({
         imagesLoaded: true,
@@ -92,25 +97,12 @@ const handleMobileDetection = () => {
     startMobileMenu(mainMenu);
     $(".js-menu-link").on("dragstart", e => e.preventDefault());
   }
-  if (SmartPhone.isAny()) {
-    // replace videos with images
-    const demos = ["search-demo", "radio-demo", "collections-demo"];
-    demos.forEach(demo => {
-      $(`#${demo}`).replaceWith(
-        `<img src='images/${demo}.png' id='${demo}' class='demo-image'/>`
-      );
-    });
-    $(".download")
-      .removeClass("download")
-      .html("<p>Available for Windows, Mac and Ubuntu.</p>");
-    $(".demo").click(function() {
-      $(this).toggleClass("active");
-    });
-  }
 };
 
 window.addEventListener( 'load', function() {
-  $carousel.data('flickity').resize();
+  const data = $carousel.data('flickity');
+  data.resize();
+  data.reposition();
 });
 
 $(document).ready(() => {
