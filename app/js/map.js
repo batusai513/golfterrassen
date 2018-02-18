@@ -35,7 +35,7 @@ module.exports = (function map(window){
         request = null,
         mapOptions = {
           zoom: 17,
-          center:  new window.google.maps.LatLng(10.9948267,-74.8060464),
+          center:  new window.google.maps.LatLng(11.007947,-74.8073293),
           mapTypeId: window.google.maps.MapTypeId.ROADMAP,
           disableDefaultUI: true
         };

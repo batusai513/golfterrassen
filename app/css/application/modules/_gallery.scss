@@ -3,6 +3,7 @@
     position: relative;
     transition: transform 0.15s ease-out 0.15s, z-index 0.15s ease-out;
     z-index: 0;
+    padding: 1px;
     &:hover {
       transform: scale(1.1);
       z-index: 1;

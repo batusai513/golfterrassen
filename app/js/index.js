@@ -8,16 +8,13 @@ import Rellax from "rellax";
 import tabby from "Tabby";
 import SmoothScroll from "smooth-scroll";
 import gumshoe from "gumshoe";
-import MapFactory from './map';
+import MapFactory from "./map";
 const Flickity = require("flickity/dist/flickity.pkgd");
-var jQueryBridget = require('jquery-bridget');
-jQueryBridget( 'flickity', Flickity, $ );
 const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
-$('.parallax').parallax();
+$(".parallax").parallax();
 
-
-new SmoothScroll('.js-menu-link', {
+new SmoothScroll(".js-smooth", {
   speed: 1000
 });
 
@@ -25,7 +22,7 @@ gumshoe.init({
   scrollDelay: true
 });
 
-var map = MapFactory('#map-canvas');
+var map = MapFactory("#map-canvas");
 
 $(".js-gallery").magnificPopup({
   delegate: "a",
@@ -68,26 +65,31 @@ function startMobileMenu(menu) {
   });
 }
 
+function createCarousel(el) {
+  if (!el) return;
+  const $el = $(el);
+  const instance = new Flickity(el, {
+    imagesLoaded: true,
+    prevNextButtons: false
+  });
+  $el.data("flickity", instance);
+  return instance;
+}
 
-
-var $carousel = $('.carousel-apartamentos').flickity({
-  imagesLoaded: true,
-  prevNextButtons: false
-});
+var $carousel = createCarousel(
+  document.querySelector(".carousel-apartamentos")
+);
 
 tabby.init({
-  callback: function ( tabs, toggle ) {
+  callback: function(tabs, toggle) {
     var el = tabs[0];
-    var carousel = $(el).find('.carousel-apartamentos');
-    var data = carousel.data('flickity');
-    if(data) {
+    var carousel = $(el).find(".carousel-apartamentos");
+    var data = carousel.data("flickity");
+    if (data) {
       data.resize();
       data.reposition();
     } else {
-      $carousel = $(carousel).flickity({
-        imagesLoaded: true,
-        prevNextButtons: false
-      });
+      $carousel = createCarousel(carousel[0]);
     }
   }
 });
@@ -99,10 +101,10 @@ const handleMobileDetection = () => {
   }
 };
 
-window.addEventListener( 'load', function() {
-  const data = $carousel.data('flickity');
-  data.resize();
-  data.reposition();
+window.addEventListener("load", function() {
+  if (!$carousel) return;
+  $carousel.resize();
+  $carousel.reposition();
 });
 
 $(document).ready(() => {
