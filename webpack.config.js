@@ -24,12 +24,14 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.html$/, loader: "html-loader", options: {
-        attrs: ['img:src', 'a:href']
-      } },
       {
-       test: /\.(js)$/,
-       use: [
+        test: /\.html$/, loader: "html-loader", options: {
+          attrs: ['img:src', 'a:href']
+        }
+      },
+      {
+        test: /\.(js)$/,
+        use: [
           {
             loader: 'babel-loader',
             options: {
@@ -37,8 +39,8 @@ module.exports = {
               presets: [['es2015', { modules: false }]]
             }
           }
-       ],
-       exclude: /(node_modules|bower_components)/,
+        ],
+        exclude: /(node_modules|bower_components)/,
       },
       {
         test: /(\.css|\.scss)$/,
@@ -77,8 +79,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery"
+      $: "jquery",
+      jQuery: "jquery"
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     // Create HTML file that includes references to bundled CSS and JS.
@@ -93,8 +95,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-          from: './static',
-          to: './images/'
+        from: './static',
+        to: './images/'
       }
     ]),
     new webpack.LoaderOptionsPlugin({

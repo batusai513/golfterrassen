@@ -62,7 +62,6 @@ module.exports = (function map(window) {
   function callback(results, status) {
     if (status == window.google.maps.places.PlacesServiceStatus.OK) {
       var place = results[0];
-      console.warn(results);
       var photos = place.photos;
       marker = new window.google.maps.Marker({
         position: place.geometry.location,

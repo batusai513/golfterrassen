@@ -31,7 +31,11 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.html$/, loader: "html-loader" },
+      {
+        test: /\.html$/, loader: "html-loader", options: {
+          attrs: ['img:src', 'a:href']
+        }
+      },
       {
        test: /\.(js)$/,
        use: [
