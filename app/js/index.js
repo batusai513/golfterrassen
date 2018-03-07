@@ -8,7 +8,7 @@ import Rellax from "rellax";
 import tabby from "Tabby";
 import SmoothScroll from "smooth-scroll";
 import gumshoe from "gumshoe";
-import MapFactory from "./map";
+// import MapFactory from "./map";
 const Flickity = require("flickity/dist/flickity.pkgd");
 const SmartPhone = smartPhone(false);
 const mainMenu = document.querySelector(".js-menu");
@@ -22,7 +22,7 @@ gumshoe.init({
   scrollDelay: true
 });
 
-var map = MapFactory("#map-canvas");
+// var map = MapFactory("#map-canvas");
 
 $(".js-gallery").magnificPopup({
   delegate: "a",
